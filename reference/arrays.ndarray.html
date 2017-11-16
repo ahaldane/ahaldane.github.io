@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '1.14.0.dev0+47f1041',
+        VERSION:     '1.14.0.dev0+a08da3f',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  false
@@ -920,11 +920,11 @@ for testing purposes. Further documentation can be found in the
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="generated/numpy.ndarray.__copy__.html#numpy.ndarray.__copy__" title="numpy.ndarray.__copy__"><code class="xref py py-obj docutils literal"><span class="pre">ndarray.__copy__</span></code></a>([order])</td>
-<td>Return a copy of the array.</td>
+<tr class="row-odd"><td><a class="reference internal" href="generated/numpy.ndarray.__copy__.html#numpy.ndarray.__copy__" title="numpy.ndarray.__copy__"><code class="xref py py-obj docutils literal"><span class="pre">ndarray.__copy__</span></code></a>()</td>
+<td>Used if <a class="reference external" href="https://docs.python.org/dev/library/copy.html#copy.copy" title="(in Python v3.7)"><code class="xref py py-func docutils literal"><span class="pre">copy.copy</span></code></a> is called on an array.</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="generated/numpy.ndarray.__deepcopy__.html#numpy.ndarray.__deepcopy__" title="numpy.ndarray.__deepcopy__"><code class="xref py py-obj docutils literal"><span class="pre">ndarray.__deepcopy__</span></code></a>((memo,&nbsp;…)</td>
-<td>Used if copy.deepcopy is called on an array.</td>
+<td>Used if <a class="reference external" href="https://docs.python.org/dev/library/copy.html#copy.deepcopy" title="(in Python v3.7)"><code class="xref py py-func docutils literal"><span class="pre">copy.deepcopy</span></code></a> is called on an array.</td>
 </tr>
 <tr class="row-odd"><td><a class="reference internal" href="generated/numpy.ndarray.__reduce__.html#numpy.ndarray.__reduce__" title="numpy.ndarray.__reduce__"><code class="xref py py-obj docutils literal"><span class="pre">ndarray.__reduce__</span></code></a>()</td>
 <td>For pickling.</td>
@@ -1039,7 +1039,7 @@ and return the appropriate scalar.</p>
         &copy; Copyright 2008-2017, The SciPy community.
       </li>
       <li>
-      Last updated on Nov 05, 2017.
+      Last updated on Nov 16, 2017.
       </li>
       <li>
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.3.

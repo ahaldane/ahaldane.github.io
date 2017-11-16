@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '1.14.0.dev0+47f1041',
+        VERSION:     '1.14.0.dev0+a08da3f',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  false
@@ -382,11 +382,11 @@ scalar arguments only</td>
 <td>Distance between 1 and the nearest floating point number.</td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal"><span class="pre">ode45</span></code></td>
-<td><code class="docutils literal"><span class="pre">scipy.integrate.ode(f).set_integrator('dopri5')</span></code></td>
+<td><code class="docutils literal"><span class="pre">scipy.integrate.solve_ivp(f)</span></code></td>
 <td>integrate an ODE with Runge-Kutta 4,5</td>
 </tr>
 <tr class="row-even"><td><code class="docutils literal"><span class="pre">ode15s</span></code></td>
-<td><code class="docutils literal"><span class="pre">scipy.integrate.ode(f).set_integrator('vode',</span> <span class="pre">method='bdf',</span> <span class="pre">order=5)</span></code></td>
+<td><code class="docutils literal"><span class="pre">scipy.integrate.solve_ivp(f,</span> <span class="pre">method='BDF')</span></code></td>
 <td>integrate an ODE with BDF method</td>
 </tr>
 </tbody>
@@ -877,7 +877,7 @@ found in the <a class="reference external" href="http://scipy.org/topical-softwa
         &copy; Copyright 2008-2017, The SciPy community.
       </li>
       <li>
-      Last updated on Nov 05, 2017.
+      Last updated on Nov 16, 2017.
       </li>
       <li>
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.3.

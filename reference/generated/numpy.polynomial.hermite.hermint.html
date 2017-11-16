@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '1.14.0.dev0+47f1041',
+        VERSION:     '1.14.0.dev0+a08da3f',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  false
@@ -163,8 +163,11 @@ before the integration constant is added. (Default: 1)</p>
 </tr>
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><p class="first"><strong>ValueError</strong></p>
 <blockquote class="last">
-<div><p>If <code class="docutils literal"><span class="pre">m</span> <span class="pre">&lt;</span> <span class="pre">0</span></code>, <code class="docutils literal"><span class="pre">len(k)</span> <span class="pre">&gt;</span> <span class="pre">m</span></code>, <code class="docutils literal"><span class="pre">np.isscalar(lbnd)</span> <span class="pre">==</span> <span class="pre">False</span></code>, or
-<code class="docutils literal"><span class="pre">np.isscalar(scl)</span> <span class="pre">==</span> <span class="pre">False</span></code>.</p>
+<div><dl class="docutils">
+<dt>If <code class="docutils literal"><span class="pre">m</span> <span class="pre">&lt;</span> <span class="pre">0</span></code>, <code class="docutils literal"><span class="pre">len(k)</span> <span class="pre">&gt;</span> <span class="pre">m</span></code>, <code class="docutils literal"><span class="pre">np.ndim(lbnd)</span> <span class="pre">!=</span> <span class="pre">0</span></code>, or</dt>
+<dd><p class="first last"><code class="docutils literal"><span class="pre">np.ndim(scl)</span> <span class="pre">!=</span> <span class="pre">0</span></code>.</p>
+</dd>
+</dl>
 </div></blockquote>
 </td>
 </tr>
@@ -223,7 +226,7 @@ Examples section below.</p>
         &copy; Copyright 2008-2017, The SciPy community.
       </li>
       <li>
-      Last updated on Nov 05, 2017.
+      Last updated on Nov 16, 2017.
       </li>
       <li>
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.3.

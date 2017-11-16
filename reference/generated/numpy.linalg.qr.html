@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '1.14.0.dev0+47f1041',
+        VERSION:     '1.14.0.dev0+a08da3f',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  false
@@ -115,14 +115,16 @@ upper-triangular.</p>
 <p><strong>mode</strong> : {‘reduced’, ‘complete’, ‘r’, ‘raw’, ‘full’, ‘economic’}, optional</p>
 <blockquote>
 <div><p>If K = min(M, N), then</p>
-<p>‘reduced’  : returns q, r with dimensions (M, K), (K, N) (default)
-‘complete’ : returns q, r with dimensions (M, M), (M, N)
-‘r’        : returns r only with dimensions (K, N)
-‘raw’      : returns h, tau with dimensions (N, M), (K,)
-‘full’     : alias of ‘reduced’, deprecated
-‘economic’ : returns h from ‘raw’, deprecated.</p>
+<ul class="simple">
+<li>‘reduced’  : returns q, r with dimensions (M, K), (K, N) (default)</li>
+<li>‘complete’ : returns q, r with dimensions (M, M), (M, N)</li>
+<li>‘r’        : returns r only with dimensions (K, N)</li>
+<li>‘raw’      : returns h, tau with dimensions (N, M), (K,)</li>
+<li>‘full’     : alias of ‘reduced’, deprecated</li>
+<li>‘economic’ : returns h from ‘raw’, deprecated.</li>
+</ul>
 <p>The options ‘reduced’, ‘complete, and ‘raw’ are new in numpy 1.8,
-see the notes for more information. The default is ‘reduced’ and to
+see the notes for more information. The default is ‘reduced’, and to
 maintain backward compatibility with earlier versions of numpy both
 it and the old default ‘full’ can be omitted. Note that array h
 returned in ‘raw’ mode is transposed for calling Fortran. The
@@ -244,7 +246,7 @@ however, we simply use <a class="reference internal" href="numpy.linalg.lstsq.ht
         &copy; Copyright 2008-2017, The SciPy community.
       </li>
       <li>
-      Last updated on Nov 05, 2017.
+      Last updated on Nov 16, 2017.
       </li>
       <li>
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.3.

@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '1.14.0.dev0+47f1041',
+        VERSION:     '1.14.0.dev0+a08da3f',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  false
@@ -100,7 +100,7 @@
 <h1>numpy.savetxt<a class="headerlink" href="#numpy-savetxt" title="Permalink to this headline">¶</a></h1>
 <dl class="function">
 <dt id="numpy.savetxt">
-<code class="descclassname">numpy.</code><code class="descname">savetxt</code><span class="sig-paren">(</span><em>fname</em>, <em>X</em>, <em>fmt='%.18e'</em>, <em>delimiter=' '</em>, <em>newline='\n'</em>, <em>header=''</em>, <em>footer=''</em>, <em>comments='# '</em><span class="sig-paren">)</span><a class="reference external" href="http://github.com/numpy/numpy/blob/master/numpy/lib/npyio.py#L1063-L1267"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numpy.savetxt" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">numpy.</code><code class="descname">savetxt</code><span class="sig-paren">(</span><em>fname</em>, <em>X</em>, <em>fmt='%.18e'</em>, <em>delimiter=' '</em>, <em>newline='\n'</em>, <em>header=''</em>, <em>footer=''</em>, <em>comments='# '</em><span class="sig-paren">)</span><a class="reference external" href="http://github.com/numpy/numpy/blob/master/numpy/lib/npyio.py#L1074-L1278"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numpy.savetxt" title="Permalink to this definition">¶</a></dt>
 <dd><p>Save an array to a text file.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -124,22 +124,13 @@ case <em class="xref py py-obj">delimiter</em> is ignored. For complex <em class
 for <em class="xref py py-obj">fmt</em> are:</p>
 <blockquote>
 <div><ol class="loweralpha simple">
-<li><dl class="first docutils">
-<dt>a single specifier, <em class="xref py py-obj">fmt=’%.4e’</em>, resulting in numbers formatted</dt>
-<dd>like <em class="xref py py-obj">‘ (%s+%sj)’ % (fmt, fmt)</em></dd>
-</dl>
-</li>
-<li><dl class="first docutils">
-<dt>a full string specifying every real and imaginary part, e.g.</dt>
-<dd><em class="xref py py-obj">‘ %.4e %+.4ej %.4e %+.4ej %.4e %+.4ej’</em> for 3 columns</dd>
-</dl>
-</li>
-<li><dl class="first docutils">
-<dt>a list of specifiers, one per column - in this case, the real</dt>
-<dd>and imaginary part must have separate specifiers,
-e.g. <em class="xref py py-obj">[‘%.3e + %.3ej’, ‘(%.15e%+.15ej)’]</em> for 2 columns</dd>
-</dl>
-</li>
+<li>a single specifier, <em class="xref py py-obj">fmt=’%.4e’</em>, resulting in numbers formatted
+like <em class="xref py py-obj">‘ (%s+%sj)’ % (fmt, fmt)</em></li>
+<li>a full string specifying every real and imaginary part, e.g.
+<em class="xref py py-obj">‘ %.4e %+.4ej %.4e %+.4ej %.4e %+.4ej’</em> for 3 columns</li>
+<li>a list of specifiers, one per column - in this case, the real
+and imaginary part must have separate specifiers,
+e.g. <em class="xref py py-obj">[‘%.3e + %.3ej’, ‘(%.15e%+.15ej)’]</em> for 2 columns</li>
 </ol>
 </div></blockquote>
 </div></blockquote>
@@ -267,7 +258,7 @@ specification see <a class="reference internal" href="#r285" id="id1">[R285]</a>
         &copy; Copyright 2008-2017, The SciPy community.
       </li>
       <li>
-      Last updated on Nov 05, 2017.
+      Last updated on Nov 16, 2017.
       </li>
       <li>
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.3.

@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '1.14.0.dev0+47f1041',
+        VERSION:     '1.14.0.dev0+a08da3f',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  false
@@ -1228,6 +1228,7 @@
 <li class="toctree-l5"><a class="reference internal" href="reference/maskedarray.baseclass.html#conversion">Conversion</a><ul>
 <li class="toctree-l6"><a class="reference internal" href="reference/generated/numpy.ma.MaskedArray.__float__.html">numpy.ma.MaskedArray.__float__</a></li>
 <li class="toctree-l6"><a class="reference internal" href="reference/generated/numpy.ma.MaskedArray.__int__.html">numpy.ma.MaskedArray.__int__</a></li>
+<li class="toctree-l6"><a class="reference internal" href="reference/generated/numpy.ma.MaskedArray.__long__.html">numpy.ma.MaskedArray.__long__</a></li>
 <li class="toctree-l6"><a class="reference internal" href="reference/generated/numpy.ma.MaskedArray.view.html">numpy.ma.MaskedArray.view</a></li>
 <li class="toctree-l6"><a class="reference internal" href="reference/generated/numpy.ma.MaskedArray.astype.html">numpy.ma.MaskedArray.astype</a></li>
 <li class="toctree-l6"><a class="reference internal" href="reference/generated/numpy.ma.MaskedArray.byteswap.html">numpy.ma.MaskedArray.byteswap</a></li>
@@ -4439,6 +4440,16 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="release.html">Release Notes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="release.html#numpy-1-13-2-release-notes">NumPy 1.13.2 Release Notes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="release.html#contributors">Contributors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release.html#pull-requests-merged">Pull requests merged</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="release.html#numpy-1-13-1-release-notes">NumPy 1.13.1 Release Notes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="release.html#id2">Pull requests merged</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release.html#id3">Contributors</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="release.html#numpy-1-13-0-release-notes">NumPy 1.13.0 Release Notes</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="release.html#highlights">Highlights</a></li>
 <li class="toctree-l3"><a class="reference internal" href="release.html#new-functions">New functions</a></li>
@@ -4513,23 +4524,23 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="release.html#numpy-1-12-0-release-notes">NumPy 1.12.0 Release Notes</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="release.html#id1">Highlights</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release.html#id4">Highlights</a></li>
 <li class="toctree-l3"><a class="reference internal" href="release.html#dropped-support">Dropped Support</a></li>
 <li class="toctree-l3"><a class="reference internal" href="release.html#added-support">Added Support</a></li>
-<li class="toctree-l3"><a class="reference internal" href="release.html#id2">Build System Changes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="release.html#id3">Deprecations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="release.html#id5">Build System Changes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release.html#id6">Deprecations</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="release.html#assignment-of-ndarray-object-s-data-attribute">Assignment of ndarray object’s <code class="docutils literal"><span class="pre">data</span></code> attribute</a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#unsafe-int-casting-of-the-num-attribute-in-linspace">Unsafe int casting of the num attribute in <code class="docutils literal"><span class="pre">linspace</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#insufficient-bit-width-parameter-to-binary-repr">Insufficient bit width parameter to <code class="docutils literal"><span class="pre">binary_repr</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="release.html#id4">Future Changes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="release.html#id7">Future Changes</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="release.html#multiple-field-manipulation-of-structured-arrays">Multiple-field manipulation of structured arrays</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="release.html#id5">Compatibility notes</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="release.html#id6">DeprecationWarning to error</a></li>
-<li class="toctree-l4"><a class="reference internal" href="release.html#id7">FutureWarning to changed behavior</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release.html#id8">Compatibility notes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="release.html#id9">DeprecationWarning to error</a></li>
+<li class="toctree-l4"><a class="reference internal" href="release.html#id10">FutureWarning to changed behavior</a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#power-and-raise-errors-for-integer-to-negative-integer-powers"><code class="docutils literal"><span class="pre">power</span></code> and <code class="docutils literal"><span class="pre">**</span></code> raise errors for integer to negative integer powers</a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#relaxed-stride-checking-is-the-default">Relaxed stride checking is the default</a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#the-np-percentile-midpoint-interpolation-method-fixed-for-exact-indices">The <code class="docutils literal"><span class="pre">np.percentile</span></code> ‘midpoint’ interpolation method fixed for exact indices</a></li>
@@ -4542,7 +4553,7 @@
 <li class="toctree-l4"><a class="reference internal" href="release.html#c-api">C API</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="release.html#id8">New Features</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="release.html#id11">New Features</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="release.html#writeable-keyword-argument-for-as-strided">Writeable keyword argument for <code class="docutils literal"><span class="pre">as_strided</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#axes-keyword-argument-for-rot90"><code class="docutils literal"><span class="pre">axes</span></code> keyword argument for <code class="docutils literal"><span class="pre">rot90</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#generalized-flip">Generalized <code class="docutils literal"><span class="pre">flip</span></code></a></li>
@@ -4566,8 +4577,8 @@
 <li class="toctree-l4"><a class="reference internal" href="release.html#numpy-sctypes-now-includes-bytes-on-python3-too">numpy.sctypes now includes bytes on Python3 too</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="release.html#id9">Improvements</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="release.html#id10"><code class="docutils literal"><span class="pre">bitwise_and</span></code> identity changed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release.html#id12">Improvements</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="release.html#id13"><code class="docutils literal"><span class="pre">bitwise_and</span></code> identity changed</a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#generalized-ufuncs-will-now-unlock-the-gil">Generalized Ufuncs will now unlock the GIL</a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#caches-in-np-fft-are-now-bounded-in-total-size-and-item-count">Caches in <em class="xref py py-obj">np.fft</em> are now bounded in total size and item count</a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#improved-handling-of-zero-width-string-unicode-dtypes">Improved handling of zero-width string/unicode dtypes</a></li>
@@ -4578,7 +4589,7 @@
 <li class="toctree-l4"><a class="reference internal" href="release.html#improved-precision-of-ndarray-mean-for-float16-arrays">Improved precision of <code class="docutils literal"><span class="pre">ndarray.mean</span></code> for float16 arrays</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="release.html#id11">Changes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="release.html#id14">Changes</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="release.html#all-array-like-methods-are-now-called-with-keyword-arguments-in-fromnumeric-py">All array-like methods are now called with keyword arguments in fromnumeric.py</a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#operations-on-np-memmap-objects-return-numpy-arrays-in-most-cases">Operations on np.memmap objects return numpy arrays in most cases</a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#stacklevel-of-warnings-increased">stacklevel of warnings increased</a></li>
@@ -4588,11 +4599,11 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="release.html#numpy-1-11-3-release-notes">NumPy 1.11.3 Release Notes</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="release.html#contributors-to-maintenance-1-11-3">Contributors to maintenance/1.11.3</a></li>
-<li class="toctree-l3"><a class="reference internal" href="release.html#pull-requests-merged">Pull Requests Merged</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release.html#id15">Pull Requests Merged</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="release.html#numpy-1-11-2-release-notes">NumPy 1.11.2 Release Notes</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="release.html#id12">Pull Requests Merged</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release.html#id16">Pull Requests Merged</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="release.html#numpy-1-11-1-release-notes">NumPy 1.11.1 Release Notes</a><ul>
@@ -4600,22 +4611,22 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="release.html#numpy-1-11-0-release-notes">NumPy 1.11.0 Release Notes</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="release.html#id13">Highlights</a></li>
-<li class="toctree-l3"><a class="reference internal" href="release.html#id14">Build System Changes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="release.html#id15">Future Changes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="release.html#id16">Compatibility notes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="release.html#id17">Highlights</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release.html#id18">Build System Changes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release.html#id19">Future Changes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release.html#id20">Compatibility notes</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="release.html#datetime64-changes">datetime64 changes</a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#linalg-norm-return-type-changes"><code class="docutils literal"><span class="pre">linalg.norm</span></code> return type changes</a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#polynomial-fit-changes">polynomial fit changes</a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#np-dot-now-raises-typeerror-instead-of-valueerror"><em>np.dot</em> now raises <code class="docutils literal"><span class="pre">TypeError</span></code> instead of <code class="docutils literal"><span class="pre">ValueError</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="release.html#id17">FutureWarning to changed behavior</a></li>
+<li class="toctree-l4"><a class="reference internal" href="release.html#id21">FutureWarning to changed behavior</a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#and-operators"><code class="docutils literal"><span class="pre">%</span></code> and <code class="docutils literal"><span class="pre">//</span></code> operators</a></li>
-<li class="toctree-l4"><a class="reference internal" href="release.html#id18">C API</a></li>
+<li class="toctree-l4"><a class="reference internal" href="release.html#id22">C API</a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#object-dtype-detection-for-old-style-classes">object dtype detection for old-style classes</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="release.html#id19">New Features</a></li>
-<li class="toctree-l3"><a class="reference internal" href="release.html#id20">Improvements</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="release.html#id23">New Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release.html#id24">Improvements</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="release.html#np-gradient-now-supports-an-axis-argument"><code class="docutils literal"><span class="pre">np.gradient</span></code> now supports an <code class="docutils literal"><span class="pre">axis</span></code> argument</a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#np-lexsort-now-supports-arrays-with-object-data-type"><code class="docutils literal"><span class="pre">np.lexsort</span></code> now supports arrays with object data-type</a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#np-ma-core-maskedarray-now-supports-an-order-argument"><code class="docutils literal"><span class="pre">np.ma.core.MaskedArray</span></code> now supports an <code class="docutils literal"><span class="pre">order</span></code> argument</a></li>
@@ -4626,15 +4637,15 @@
 <li class="toctree-l4"><a class="reference internal" href="release.html#speed-improvement-for-np-random-shuffle">Speed improvement for np.random.shuffle</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="release.html#id21">Changes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="release.html#id25">Changes</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="release.html#pyrex-support-was-removed-from-numpy-distutils">Pyrex support was removed from <code class="docutils literal"><span class="pre">numpy.distutils</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#np-broadcast-can-now-be-called-with-a-single-argument"><code class="docutils literal"><span class="pre">np.broadcast</span></code> can now be called with a single argument</a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#np-trace-now-respects-array-subclasses"><code class="docutils literal"><span class="pre">np.trace</span></code> now respects array subclasses</a></li>
-<li class="toctree-l4"><a class="reference internal" href="release.html#id22"><code class="docutils literal"><span class="pre">np.dot</span></code> now raises <code class="docutils literal"><span class="pre">TypeError</span></code> instead of <code class="docutils literal"><span class="pre">ValueError</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="release.html#id23"><code class="docutils literal"><span class="pre">linalg.norm</span></code> return type changes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="release.html#id26"><code class="docutils literal"><span class="pre">np.dot</span></code> now raises <code class="docutils literal"><span class="pre">TypeError</span></code> instead of <code class="docutils literal"><span class="pre">ValueError</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="release.html#id27"><code class="docutils literal"><span class="pre">linalg.norm</span></code> return type changes</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="release.html#id24">Deprecations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="release.html#id28">Deprecations</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="release.html#views-of-arrays-in-fortran-order">Views of arrays in Fortran order</a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#invalid-arguments-for-array-ordering">Invalid arguments for array ordering</a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#random-number-generator-in-the-testing-namespace">Random number generator in the <code class="docutils literal"><span class="pre">testing</span></code> namespace</a></li>
@@ -4648,30 +4659,30 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="release.html#numpy-1-10-4-release-notes">NumPy 1.10.4 Release Notes</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="release.html#id25">Compatibility notes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release.html#id29">Compatibility notes</a></li>
 <li class="toctree-l3"><a class="reference internal" href="release.html#issues-fixed">Issues Fixed</a></li>
 <li class="toctree-l3"><a class="reference internal" href="release.html#merged-prs">Merged PRs</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="release.html#numpy-1-10-3-release-notes">NumPy 1.10.3 Release Notes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="release.html#numpy-1-10-2-release-notes">NumPy 1.10.2 Release Notes</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="release.html#id26">Compatibility notes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="release.html#id30">Compatibility notes</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="release.html#relaxed-stride-checking-is-no-longer-the-default">Relaxed stride checking is no longer the default</a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#fix-swig-bug-in-numpy-i">Fix swig bug in <code class="docutils literal"><span class="pre">numpy.i</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#deprecate-views-changing-dimensions-in-fortran-order">Deprecate views changing dimensions in fortran order</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="release.html#id27">Issues Fixed</a></li>
-<li class="toctree-l3"><a class="reference internal" href="release.html#id28">Merged PRs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release.html#id31">Issues Fixed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release.html#id32">Merged PRs</a></li>
 <li class="toctree-l3"><a class="reference internal" href="release.html#notes">Notes</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="release.html#numpy-1-10-1-release-notes">NumPy 1.10.1 Release Notes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="release.html#numpy-1-10-0-release-notes">NumPy 1.10.0 Release Notes</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="release.html#id29">Highlights</a></li>
-<li class="toctree-l3"><a class="reference internal" href="release.html#id30">Dropped Support</a></li>
-<li class="toctree-l3"><a class="reference internal" href="release.html#id31">Future Changes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="release.html#id32">Compatibility notes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="release.html#id33">Highlights</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release.html#id34">Dropped Support</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release.html#id35">Future Changes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release.html#id36">Compatibility notes</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="release.html#default-casting-rule-change">Default casting rule change</a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#numpy-version-string">numpy version string</a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#relaxed-stride-checking">relaxed stride checking</a></li>
@@ -4679,7 +4690,7 @@
 <li class="toctree-l4"><a class="reference internal" href="release.html#np-ravel-np-diagonal-and-np-diag-now-preserve-subtypes"><em>np.ravel</em>, <em>np.diagonal</em> and <em>np.diag</em> now preserve subtypes</a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#rollaxis-and-swapaxes-always-return-a-view"><em>rollaxis</em> and <em>swapaxes</em> always return a view</a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#nonzero-now-returns-base-ndarrays"><em>nonzero</em> now returns base ndarrays</a></li>
-<li class="toctree-l4"><a class="reference internal" href="release.html#id33">C API</a></li>
+<li class="toctree-l4"><a class="reference internal" href="release.html#id37">C API</a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#recarray-field-return-types">recarray field return types</a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#recarray-views">recarray views</a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#out-keyword-argument-of-ufuncs-now-accepts-tuples-of-arrays">‘out’ keyword argument of ufuncs now accepts tuples of arrays</a></li>
@@ -4689,7 +4700,7 @@
 <li class="toctree-l4"><a class="reference internal" href="release.html#functions-available-from-numpy-ma-testutils-have-changed">Functions available from numpy.ma.testutils have changed</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="release.html#id34">New Features</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="release.html#id38">New Features</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="release.html#reading-extra-flags-from-site-cfg">Reading extra flags from site.cfg</a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#np-cbrt-to-compute-cube-root-for-real-floats"><em>np.cbrt</em> to compute cube root for real floats</a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#numpy-distutils-now-allows-parallel-compilation">numpy.distutils now allows parallel compilation</a></li>
@@ -4701,7 +4712,7 @@
 <li class="toctree-l4"><a class="reference internal" href="release.html#new-argument-norm-to-fft-functions">New argument <code class="docutils literal"><span class="pre">norm</span></code> to fft functions</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="release.html#id35">Improvements</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="release.html#id39">Improvements</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="release.html#np-digitize-using-binary-search"><em>np.digitize</em> using binary search</a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#np-poly-now-casts-integer-inputs-to-float"><em>np.poly</em> now casts integer inputs to float</a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#np-interp-can-now-be-used-with-periodic-functions"><em>np.interp</em> can now be used with periodic functions</a></li>
@@ -4716,14 +4727,14 @@
 <li class="toctree-l4"><a class="reference internal" href="release.html#maskedarray-support-for-more-complicated-base-classes">MaskedArray support for more complicated base classes</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="release.html#id36">Changes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="release.html#id40">Changes</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="release.html#dotblas-functionality-moved-to-multiarray">dotblas functionality moved to multiarray</a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#stricter-check-of-gufunc-signature-compliance">stricter check of gufunc signature compliance</a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#views-returned-from-np-einsum-are-writeable">views returned from <em>np.einsum</em> are writeable</a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#np-argmin-skips-nat-values"><em>np.argmin</em> skips NaT values</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="release.html#id37">Deprecations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="release.html#id41">Deprecations</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="release.html#array-comparisons-involving-strings-or-structured-dtypes">Array comparisons involving strings or structured dtypes</a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#safeeval">SafeEval</a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#alterdot-restoredot">alterdot, restoredot</a></li>
@@ -4735,18 +4746,18 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="release.html#numpy-1-9-2-release-notes">NumPy 1.9.2 Release Notes</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="release.html#id38">Issues fixed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release.html#id42">Issues fixed</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="release.html#numpy-1-9-1-release-notes">NumPy 1.9.1 Release Notes</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="release.html#id39">Issues fixed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release.html#id43">Issues fixed</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="release.html#numpy-1-9-0-release-notes">NumPy 1.9.0 Release Notes</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="release.html#id40">Highlights</a></li>
-<li class="toctree-l3"><a class="reference internal" href="release.html#id41">Dropped Support</a></li>
-<li class="toctree-l3"><a class="reference internal" href="release.html#id42">Future Changes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="release.html#id43">Compatibility notes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="release.html#id44">Highlights</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release.html#id45">Dropped Support</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release.html#id46">Future Changes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release.html#id47">Compatibility notes</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="release.html#the-diagonal-and-diag-functions-return-readonly-views">The diagonal and diag functions return readonly views.</a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#special-scalar-float-values-don-t-cause-upcast-to-double-anymore">Special scalar float values don’t cause upcast to double anymore</a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#percentile-output-changes">Percentile output changes</a></li>
@@ -4770,7 +4781,7 @@
 <li class="toctree-l4"><a class="reference internal" href="release.html#zeros-like-for-string-dtypes-now-returns-empty-strings"><code class="docutils literal"><span class="pre">zeros_like</span></code> for string dtypes now returns empty strings</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="release.html#id44">New Features</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="release.html#id48">New Features</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="release.html#percentile-supports-more-interpolation-options">Percentile supports more interpolation options</a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#generalized-axis-support-for-median-and-percentile">Generalized axis support for median and percentile</a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#dtype-parameter-added-to-np-linspace-and-np-logspace">Dtype parameter added to <code class="docutils literal"><span class="pre">np.linspace</span></code> and <code class="docutils literal"><span class="pre">np.logspace</span></code></a></li>
@@ -4786,7 +4797,7 @@
 <li class="toctree-l4"><a class="reference internal" href="release.html#full-broadcasting-support-for-np-cross">Full broadcasting support for <code class="docutils literal"><span class="pre">np.cross</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="release.html#id45">Improvements</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="release.html#id49">Improvements</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="release.html#better-numerical-stability-for-sum-in-some-cases">Better numerical stability for sum in some cases</a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#percentile-implemented-in-terms-of-np-partition">Percentile implemented in terms of <code class="docutils literal"><span class="pre">np.partition</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#performance-improvement-for-np-array">Performance improvement for <code class="docutils literal"><span class="pre">np.array</span></code></a></li>
@@ -4795,42 +4806,42 @@
 <li class="toctree-l4"><a class="reference internal" href="release.html#covariance-check-in-np-random-multivariate-normal">Covariance check in <code class="docutils literal"><span class="pre">np.random.multivariate_normal</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#polynomial-classes-no-longer-template-based">Polynomial Classes no longer template based</a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#more-gil-releases">More GIL releases</a></li>
-<li class="toctree-l4"><a class="reference internal" href="release.html#id46">MaskedArray support for more complicated base classes</a></li>
-<li class="toctree-l4"><a class="reference internal" href="release.html#id47">C-API</a></li>
+<li class="toctree-l4"><a class="reference internal" href="release.html#id50">MaskedArray support for more complicated base classes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="release.html#id51">C-API</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="release.html#id48">Deprecations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="release.html#id52">Deprecations</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="release.html#non-integer-scalars-for-sequence-repetition">Non-integer scalars for sequence repetition</a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#select-input-deprecations"><code class="docutils literal"><span class="pre">select</span></code> input deprecations</a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#rank-function"><code class="docutils literal"><span class="pre">rank</span></code> function</a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#object-array-equality-comparisons">Object array equality comparisons</a></li>
-<li class="toctree-l4"><a class="reference internal" href="release.html#id49">C-API</a></li>
+<li class="toctree-l4"><a class="reference internal" href="release.html#id53">C-API</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="release.html#numpy-1-8-2-release-notes">NumPy 1.8.2 Release Notes</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="release.html#id50">Issues fixed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release.html#id54">Issues fixed</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="release.html#numpy-1-8-1-release-notes">NumPy 1.8.1 Release Notes</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="release.html#id51">Issues fixed</a></li>
-<li class="toctree-l3"><a class="reference internal" href="release.html#id52">Changes</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="release.html#id53">NDIter</a></li>
-<li class="toctree-l4"><a class="reference internal" href="release.html#id54">Optional reduced verbosity for np.distutils</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release.html#id55">Issues fixed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release.html#id56">Changes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="release.html#id57">NDIter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="release.html#id58">Optional reduced verbosity for np.distutils</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="release.html#id55">Deprecations</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="release.html#id56">C-API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release.html#id59">Deprecations</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="release.html#id60">C-API</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="release.html#numpy-1-8-0-release-notes">NumPy 1.8.0 Release Notes</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="release.html#id57">Highlights</a></li>
-<li class="toctree-l3"><a class="reference internal" href="release.html#id58">Dropped Support</a></li>
-<li class="toctree-l3"><a class="reference internal" href="release.html#id59">Future Changes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="release.html#id60">Compatibility notes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="release.html#id61">Highlights</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release.html#id62">Dropped Support</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release.html#id63">Future Changes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release.html#id64">Compatibility notes</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="release.html#npy-relaxed-strides-checking">NPY_RELAXED_STRIDES_CHECKING</a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#binary-operations-with-non-arrays-as-second-argument">Binary operations with non-arrays as second argument</a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#function-median-used-with-overwrite-input-only-partially-sorts-array">Function <em class="xref py py-obj">median</em> used with <em class="xref py py-obj">overwrite_input</em> only partially sorts array</a></li>
@@ -4838,7 +4849,7 @@
 <li class="toctree-l4"><a class="reference internal" href="release.html#runtime-warnings-when-comparing-nan-numbers">Runtime warnings when comparing NaN numbers</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="release.html#id61">New Features</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="release.html#id65">New Features</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="release.html#support-for-linear-algebra-on-stacked-arrays">Support for linear algebra on stacked arrays</a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#in-place-fancy-indexing-for-ufuncs">In place fancy indexing for ufuncs</a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#new-functions-partition-and-argpartition">New functions <em class="xref py py-obj">partition</em> and <em class="xref py py-obj">argpartition</em></a></li>
@@ -4850,11 +4861,11 @@
 <li class="toctree-l4"><a class="reference internal" href="release.html#new-modes-for-qr">New modes for qr</a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#new-invert-argument-to-in1d">New <em class="xref py py-obj">invert</em> argument to <em class="xref py py-obj">in1d</em></a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#advanced-indexing-using-np-newaxis">Advanced indexing using <em class="xref py py-obj">np.newaxis</em></a></li>
-<li class="toctree-l4"><a class="reference internal" href="release.html#id62">C-API</a></li>
+<li class="toctree-l4"><a class="reference internal" href="release.html#id66">C-API</a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#runtests-py">runtests.py</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="release.html#id63">Improvements</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="release.html#id67">Improvements</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="release.html#io-performance-improvements">IO performance improvements</a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#performance-improvements-to-pad">Performance improvements to <em class="xref py py-obj">pad</em></a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#performance-improvements-to-isnan-isinf-isfinite-and-byteswap">Performance improvements to <em class="xref py py-obj">isnan</em>, <em class="xref py py-obj">isinf</em>, <em class="xref py py-obj">isfinite</em> and <em class="xref py py-obj">byteswap</em></a></li>
@@ -4863,32 +4874,32 @@
 <li class="toctree-l4"><a class="reference internal" href="release.html#overrideable-operand-flags-in-ufunc-c-api">Overrideable operand flags in ufunc C-API</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="release.html#id64">Changes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="release.html#id68">Changes</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="release.html#general">General</a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#c-api-array-additions">C-API Array Additions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#c-api-ufunc-additions">C-API Ufunc Additions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#c-api-developer-improvements">C-API Developer Improvements</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="release.html#id65">Deprecations</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="release.html#id66">General</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release.html#id69">Deprecations</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="release.html#id70">General</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="release.html#authors">Authors</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="release.html#numpy-1-7-2-release-notes">NumPy 1.7.2 Release Notes</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="release.html#id67">Issues fixed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release.html#id71">Issues fixed</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="release.html#numpy-1-7-1-release-notes">NumPy 1.7.1 Release Notes</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="release.html#id68">Issues fixed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release.html#id72">Issues fixed</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="release.html#numpy-1-7-0-release-notes">NumPy 1.7.0 Release Notes</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="release.html#id69">Highlights</a></li>
-<li class="toctree-l3"><a class="reference internal" href="release.html#id70">Compatibility notes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="release.html#id71">New features</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="release.html#id73">Highlights</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release.html#id74">Compatibility notes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release.html#id75">New features</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="release.html#reduction-ufuncs-generalize-axis-parameter">Reduction UFuncs Generalize axis= Parameter</a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#reduction-ufuncs-new-keepdims-parameter">Reduction UFuncs New keepdims= Parameter</a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#datetime-support">Datetime support</a></li>
@@ -4898,31 +4909,31 @@
 <li class="toctree-l4"><a class="reference internal" href="release.html#preliminary-multi-dimensional-support-in-the-polynomial-package">Preliminary multi-dimensional support in the polynomial package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#ability-to-pad-rank-n-arrays">Ability to pad rank-n arrays</a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#new-argument-to-searchsorted">New argument to searchsorted</a></li>
-<li class="toctree-l4"><a class="reference internal" href="release.html#id72">Build system</a></li>
-<li class="toctree-l4"><a class="reference internal" href="release.html#id73">C API</a></li>
+<li class="toctree-l4"><a class="reference internal" href="release.html#id76">Build system</a></li>
+<li class="toctree-l4"><a class="reference internal" href="release.html#id77">C API</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="release.html#id74">Changes</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="release.html#id75">General</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release.html#id78">Changes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="release.html#id79">General</a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#casting-rules">Casting Rules</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="release.html#id76">Deprecations</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="release.html#id77">General</a></li>
-<li class="toctree-l4"><a class="reference internal" href="release.html#id78">C-API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release.html#id80">Deprecations</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="release.html#id81">General</a></li>
+<li class="toctree-l4"><a class="reference internal" href="release.html#id82">C-API</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="release.html#numpy-1-6-2-release-notes">NumPy 1.6.2 Release Notes</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="release.html#id79">Issues fixed</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="release.html#id83">Issues fixed</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="release.html#numpy-core"><code class="docutils literal"><span class="pre">numpy.core</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#numpy-lib"><code class="docutils literal"><span class="pre">numpy.lib</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#numpy-distutils"><code class="docutils literal"><span class="pre">numpy.distutils</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#numpy-random"><code class="docutils literal"><span class="pre">numpy.random</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="release.html#id80">Changes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="release.html#id84">Changes</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="release.html#numpy-f2py"><code class="docutils literal"><span class="pre">numpy.f2py</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#numpy-poly"><code class="docutils literal"><span class="pre">numpy.poly</span></code></a></li>
 </ul>
@@ -4930,12 +4941,12 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="release.html#numpy-1-6-1-release-notes">NumPy 1.6.1 Release Notes</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="release.html#id81">Issues Fixed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release.html#id85">Issues Fixed</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="release.html#numpy-1-6-0-release-notes">NumPy 1.6.0 Release Notes</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="release.html#id82">Highlights</a></li>
-<li class="toctree-l3"><a class="reference internal" href="release.html#id83">New features</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="release.html#id86">Highlights</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release.html#id87">New features</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="release.html#new-16-bit-floating-point-type">New 16-bit floating point type</a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#new-iterator">New iterator</a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#legendre-laguerre-hermite-hermitee-polynomials-in-numpy-polynomial">Legendre, Laguerre, Hermite, HermiteE polynomials in <code class="docutils literal"><span class="pre">numpy.polynomial</span></code></a></li>
@@ -4943,38 +4954,38 @@
 <li class="toctree-l4"><a class="reference internal" href="release.html#other-new-functions">Other new functions</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="release.html#id84">Changes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="release.html#id88">Changes</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="release.html#default-error-handling"><code class="docutils literal"><span class="pre">default</span> <span class="pre">error</span> <span class="pre">handling</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="release.html#id85"><code class="docutils literal"><span class="pre">numpy.distutils</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="release.html#id89"><code class="docutils literal"><span class="pre">numpy.distutils</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#numpy-testing"><code class="docutils literal"><span class="pre">numpy.testing</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="release.html#id86"><code class="docutils literal"><span class="pre">C</span> <span class="pre">API</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="release.html#id90"><code class="docutils literal"><span class="pre">C</span> <span class="pre">API</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="release.html#deprecated-features">Deprecated features</a></li>
 <li class="toctree-l3"><a class="reference internal" href="release.html#removed-features">Removed features</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="release.html#numpy-fft"><code class="docutils literal"><span class="pre">numpy.fft</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#numpy-memmap"><code class="docutils literal"><span class="pre">numpy.memmap</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="release.html#id87"><code class="docutils literal"><span class="pre">numpy.lib</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="release.html#id91"><code class="docutils literal"><span class="pre">numpy.lib</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#numpy-ma"><code class="docutils literal"><span class="pre">numpy.ma</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="release.html#id88"><code class="docutils literal"><span class="pre">numpy.distutils</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="release.html#id92"><code class="docutils literal"><span class="pre">numpy.distutils</span></code></a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="release.html#numpy-1-5-0-release-notes">NumPy 1.5.0 Release Notes</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="release.html#id89">Highlights</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="release.html#id93">Highlights</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="release.html#python-3-compatibility">Python 3 compatibility</a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#pep-3118-compatibility"><strong>PEP 3118</strong> compatibility</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="release.html#id90">New features</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="release.html#id94">New features</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="release.html#warning-on-casting-complex-to-real">Warning on casting complex to real</a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#dot-method-for-ndarrays">Dot method for ndarrays</a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#linalg-slogdet-function">linalg.slogdet function</a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#new-header">new header</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="release.html#id91">Changes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="release.html#id95">Changes</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="release.html#polynomial-polynomial">polynomial.polynomial</a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#polynomial-chebyshev">polynomial.chebyshev</a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#histogram">histogram</a></li>
@@ -4984,8 +4995,8 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="release.html#numpy-1-4-0-release-notes">NumPy 1.4.0 Release Notes</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="release.html#id92">Highlights</a></li>
-<li class="toctree-l3"><a class="reference internal" href="release.html#id93">New features</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="release.html#id96">Highlights</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release.html#id97">New features</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="release.html#extended-array-wrapping-mechanism-for-ufuncs">Extended array wrapping mechanism for ufuncs</a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#automatic-detection-of-forward-incompatibilities">Automatic detection of forward incompatibilities</a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#new-iterators">New iterators</a></li>
@@ -4998,8 +5009,8 @@
 <li class="toctree-l4"><a class="reference internal" href="release.html#improved-set-operations">Improved set operations</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="release.html#id94">Improvements</a></li>
-<li class="toctree-l3"><a class="reference internal" href="release.html#id95">Deprecations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release.html#id98">Improvements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release.html#id99">Deprecations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="release.html#internal-changes">Internal changes</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="release.html#use-c99-complex-functions-when-available">Use C99 complex functions when available</a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#split-multiarray-and-umath-source-code">split multiarray and umath source code</a></li>
@@ -5010,39 +5021,39 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="release.html#numpy-1-3-0-release-notes">NumPy 1.3.0 Release Notes</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="release.html#id96">Highlights</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="release.html#id100">Highlights</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="release.html#python-2-6-support">Python 2.6 support</a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#generalized-ufuncs">Generalized ufuncs</a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#experimental-windows-64-bits-support">Experimental Windows 64 bits support</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="release.html#id97">New features</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="release.html#id101">New features</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="release.html#formatting-issues">Formatting issues</a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#nan-handling-in-max-min">Nan handling in max/min</a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#nan-handling-in-sign">Nan handling in sign</a></li>
-<li class="toctree-l4"><a class="reference internal" href="release.html#id98">New ufuncs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="release.html#id102">New ufuncs</a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#masked-arrays">Masked arrays</a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#gfortran-support-on-windows">gfortran support on windows</a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#arch-option-for-windows-binary">Arch option for windows binary</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="release.html#id99">Deprecated features</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="release.html#id100">Histogram</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release.html#id103">Deprecated features</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="release.html#id104">Histogram</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="release.html#documentation-changes">Documentation changes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="release.html#id101">New C API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="release.html#id105">New C API</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="release.html#multiarray-api">Multiarray API</a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#ufunc-api">Ufunc API</a></li>
-<li class="toctree-l4"><a class="reference internal" href="release.html#id102">New defines</a></li>
+<li class="toctree-l4"><a class="reference internal" href="release.html#id106">New defines</a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#portable-nan-infinity-etc">Portable NAN, INFINITY, etc…</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="release.html#id103">Internal changes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="release.html#id107">Internal changes</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="release.html#numpy-core-math-configuration-revamp">numpy.core math configuration revamp</a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#umath-refactor">umath refactor</a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#improvements-to-build-warnings">Improvements to build warnings</a></li>
-<li class="toctree-l4"><a class="reference internal" href="release.html#id104">Separate core math library</a></li>
+<li class="toctree-l4"><a class="reference internal" href="release.html#id108">Separate core math library</a></li>
 <li class="toctree-l4"><a class="reference internal" href="release.html#cpu-arch-detection">CPU arch detection</a></li>
 </ul>
 </li>
@@ -5088,7 +5099,7 @@
         &copy; Copyright 2008-2017, The SciPy community.
       </li>
       <li>
-      Last updated on Nov 05, 2017.
+      Last updated on Nov 16, 2017.
       </li>
       <li>
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.3.

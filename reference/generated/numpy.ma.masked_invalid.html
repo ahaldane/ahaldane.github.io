@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '1.14.0.dev0+47f1041',
+        VERSION:     '1.14.0.dev0+a08da3f',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  false
@@ -101,7 +101,7 @@
 <h1>numpy.ma.masked_invalid<a class="headerlink" href="#numpy-ma-masked-invalid" title="Permalink to this headline">¶</a></h1>
 <dl class="function">
 <dt id="numpy.ma.masked_invalid">
-<code class="descclassname">numpy.ma.</code><code class="descname">masked_invalid</code><span class="sig-paren">(</span><em>a</em>, <em>copy=True</em><span class="sig-paren">)</span><a class="reference external" href="http://github.com/numpy/numpy/blob/master/numpy/ma/core.py#L2315-L2354"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numpy.ma.masked_invalid" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">numpy.ma.</code><code class="descname">masked_invalid</code><span class="sig-paren">(</span><em>a</em>, <em>copy=True</em><span class="sig-paren">)</span><a class="reference external" href="http://github.com/numpy/numpy/blob/master/numpy/ma/core.py#L2325-L2364"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numpy.ma.masked_invalid" title="Permalink to this definition">¶</a></dt>
 <dd><p>Mask an array where invalid values occur (NaNs or infs).</p>
 <p>This function is a shortcut to <code class="docutils literal"><span class="pre">masked_where</span></code>, with
 <em class="xref py py-obj">condition</em> = ~(np.isfinite(a)). Any pre-existing mask is conserved.
@@ -152,7 +152,7 @@ Only applies to arrays with a dtype where NaNs or infs make sense
         &copy; Copyright 2008-2017, The SciPy community.
       </li>
       <li>
-      Last updated on Nov 05, 2017.
+      Last updated on Nov 16, 2017.
       </li>
       <li>
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.3.

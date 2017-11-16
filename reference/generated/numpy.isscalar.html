@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '1.14.0.dev0+47f1041',
+        VERSION:     '1.14.0.dev0+a08da3f',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  false
@@ -100,7 +100,7 @@
 <h1>numpy.isscalar<a class="headerlink" href="#numpy-isscalar" title="Permalink to this headline">¶</a></h1>
 <dl class="function">
 <dt id="numpy.isscalar">
-<code class="descclassname">numpy.</code><code class="descname">isscalar</code><span class="sig-paren">(</span><em>num</em><span class="sig-paren">)</span><a class="reference external" href="http://github.com/numpy/numpy/blob/master/numpy/core/numeric.py#L1934-L1963"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numpy.isscalar" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">numpy.</code><code class="descname">isscalar</code><span class="sig-paren">(</span><em>num</em><span class="sig-paren">)</span><a class="reference external" href="http://github.com/numpy/numpy/blob/master/numpy/core/numeric.py#L1915-L1952"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numpy.isscalar" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns True if the type of <em class="xref py py-obj">num</em> is a scalar type.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -131,6 +131,15 @@
 <span class="go">True</span>
 </pre></div>
 </div>
+<p>NumPy supports PEP 3141 numbers:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">fractions</span> <span class="k">import</span> <span class="n">Fraction</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">isscalar</span><span class="p">(</span><span class="n">Fraction</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">17</span><span class="p">))</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">numbers</span> <span class="k">import</span> <span class="n">Number</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">isscalar</span><span class="p">(</span><span class="n">Number</span><span class="p">())</span>
+<span class="go">True</span>
+</pre></div>
+</div>
 </dd></dl>
 
 </div>
@@ -156,7 +165,7 @@
         &copy; Copyright 2008-2017, The SciPy community.
       </li>
       <li>
-      Last updated on Nov 05, 2017.
+      Last updated on Nov 16, 2017.
       </li>
       <li>
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.3.

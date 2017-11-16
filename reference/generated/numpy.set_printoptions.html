@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '1.14.0.dev0+47f1041',
+        VERSION:     '1.14.0.dev0+a08da3f',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  false
@@ -100,7 +100,7 @@
 <h1>numpy.set_printoptions<a class="headerlink" href="#numpy-set-printoptions" title="Permalink to this headline">¶</a></h1>
 <dl class="function">
 <dt id="numpy.set_printoptions">
-<code class="descclassname">numpy.</code><code class="descname">set_printoptions</code><span class="sig-paren">(</span><em>precision=None</em>, <em>threshold=None</em>, <em>edgeitems=None</em>, <em>linewidth=None</em>, <em>suppress=None</em>, <em>nanstr=None</em>, <em>infstr=None</em>, <em>formatter=None</em><span class="sig-paren">)</span><a class="reference external" href="http://github.com/numpy/numpy/blob/master/numpy/core/arrayprint.py#L72-L199"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numpy.set_printoptions" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">numpy.</code><code class="descname">set_printoptions</code><span class="sig-paren">(</span><em>precision=None</em>, <em>threshold=None</em>, <em>edgeitems=None</em>, <em>linewidth=None</em>, <em>suppress=None</em>, <em>nanstr=None</em>, <em>infstr=None</em>, <em>formatter=None</em>, <em>sign=None</em><span class="sig-paren">)</span><a class="reference external" href="http://github.com/numpy/numpy/blob/master/numpy/core/arrayprint.py#L85-L202"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numpy.set_printoptions" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set printing options.</p>
 <p>These options determine the way floating point numbers, arrays and
 other NumPy objects are displayed.</p>
@@ -142,6 +142,14 @@ maximum absolute value to the minimum is &gt; 1e3. The default is False.</p>
 <p><strong>infstr</strong> : str, optional</p>
 <blockquote>
 <div><p>String representation of floating point infinity (default inf).</p>
+</div></blockquote>
+<p><strong>sign</strong> : string, either ‘-‘, ‘+’, ‘ ‘ or ‘legacy’, optional</p>
+<blockquote>
+<div><p>Controls printing of the sign of floating-point types. If ‘+’, always
+print the sign of positive values. If ‘ ‘, always prints a space
+(whitespace character) in the sign position of positive values.  If
+‘-‘, omit the sign character of positive values. If ‘legacy’, print a
+space for positive values except in 0d arrays. (default ‘-‘)</p>
 </div></blockquote>
 <p><strong>formatter</strong> : dict of callables, optional</p>
 <blockquote class="last">
@@ -246,7 +254,7 @@ can be set are:</p>
         &copy; Copyright 2008-2017, The SciPy community.
       </li>
       <li>
-      Last updated on Nov 05, 2017.
+      Last updated on Nov 16, 2017.
       </li>
       <li>
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.3.

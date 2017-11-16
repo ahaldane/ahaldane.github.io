@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '1.14.0.dev0+47f1041',
+        VERSION:     '1.14.0.dev0+a08da3f',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  false
@@ -100,7 +100,7 @@
 <h1>numpy.piecewise<a class="headerlink" href="#numpy-piecewise" title="Permalink to this headline">¶</a></h1>
 <dl class="function">
 <dt id="numpy.piecewise">
-<code class="descclassname">numpy.</code><code class="descname">piecewise</code><span class="sig-paren">(</span><em>x</em>, <em>condlist</em>, <em>funclist</em>, <em>*args</em>, <em>**kw</em><span class="sig-paren">)</span><a class="reference external" href="http://github.com/numpy/numpy/blob/master/numpy/lib/function_base.py#L1218-L1338"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numpy.piecewise" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">numpy.</code><code class="descname">piecewise</code><span class="sig-paren">(</span><em>x</em>, <em>condlist</em>, <em>funclist</em>, <em>*args</em>, <em>**kw</em><span class="sig-paren">)</span><a class="reference external" href="http://github.com/numpy/numpy/blob/master/numpy/lib/function_base.py#L1237-L1355"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numpy.piecewise" title="Permalink to this definition">¶</a></dt>
 <dd><p>Evaluate a piecewise-defined function.</p>
 <p>Given a set of conditions and corresponding functions, evaluate each
 function on the input data wherever its condition is true.</p>
@@ -120,14 +120,14 @@ function on the input data wherever its condition is true.</p>
 and should therefore be of the same shape as <em class="xref py py-obj">x</em>.</p>
 <p>The length of <em class="xref py py-obj">condlist</em> must correspond to that of <em class="xref py py-obj">funclist</em>.
 If one extra function is given, i.e. if
-<code class="docutils literal"><span class="pre">len(funclist)</span> <span class="pre">-</span> <span class="pre">len(condlist)</span> <span class="pre">==</span> <span class="pre">1</span></code>, then that extra function
+<code class="docutils literal"><span class="pre">len(funclist)</span> <span class="pre">==</span> <span class="pre">len(condlist)</span> <span class="pre">+</span> <span class="pre">1</span></code>, then that extra function
 is the default value, used wherever all conditions are false.</p>
 </div></blockquote>
 <p><strong>funclist</strong> : list of callables, f(x,*args,**kw), or scalars</p>
 <blockquote>
 <div><p>Each function is evaluated over <em class="xref py py-obj">x</em> wherever its corresponding
-condition is True.  It should take an array as input and give an array
-or a scalar value as output.  If, instead of a callable,
+condition is True.  It should take a 1d array as input and give an 1d
+array or a scalar value as output.  If, instead of a callable,
 a scalar is provided then a constant function (<code class="docutils literal"><span class="pre">lambda</span> <span class="pre">x:</span> <span class="pre">scalar</span></code>) is
 assumed.</p>
 </div></blockquote>
@@ -218,7 +218,7 @@ evaluated on elements of <em class="xref py py-obj">x</em> that satisfy the corr
         &copy; Copyright 2008-2017, The SciPy community.
       </li>
       <li>
-      Last updated on Nov 05, 2017.
+      Last updated on Nov 16, 2017.
       </li>
       <li>
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.3.

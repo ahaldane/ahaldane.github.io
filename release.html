@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '1.14.0.dev0+47f1041',
+        VERSION:     '1.14.0.dev0+a08da3f',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  false
@@ -80,6 +80,16 @@
   <h3><a href="contents.html">Table Of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Release Notes</a><ul>
+<li><a class="reference internal" href="#numpy-1-13-2-release-notes">NumPy 1.13.2 Release Notes</a><ul>
+<li><a class="reference internal" href="#contributors">Contributors</a></li>
+<li><a class="reference internal" href="#pull-requests-merged">Pull requests merged</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#numpy-1-13-1-release-notes">NumPy 1.13.1 Release Notes</a><ul>
+<li><a class="reference internal" href="#id2">Pull requests merged</a></li>
+<li><a class="reference internal" href="#id3">Contributors</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#numpy-1-13-0-release-notes">NumPy 1.13.0 Release Notes</a><ul>
 <li><a class="reference internal" href="#highlights">Highlights</a></li>
 <li><a class="reference internal" href="#new-functions">New functions</a></li>
@@ -154,23 +164,23 @@
 </ul>
 </li>
 <li><a class="reference internal" href="#numpy-1-12-0-release-notes">NumPy 1.12.0 Release Notes</a><ul>
-<li><a class="reference internal" href="#id1">Highlights</a></li>
+<li><a class="reference internal" href="#id4">Highlights</a></li>
 <li><a class="reference internal" href="#dropped-support">Dropped Support</a></li>
 <li><a class="reference internal" href="#added-support">Added Support</a></li>
-<li><a class="reference internal" href="#id2">Build System Changes</a></li>
-<li><a class="reference internal" href="#id3">Deprecations</a><ul>
+<li><a class="reference internal" href="#id5">Build System Changes</a></li>
+<li><a class="reference internal" href="#id6">Deprecations</a><ul>
 <li><a class="reference internal" href="#assignment-of-ndarray-object-s-data-attribute">Assignment of ndarray object’s <code class="docutils literal"><span class="pre">data</span></code> attribute</a></li>
 <li><a class="reference internal" href="#unsafe-int-casting-of-the-num-attribute-in-linspace">Unsafe int casting of the num attribute in <code class="docutils literal"><span class="pre">linspace</span></code></a></li>
 <li><a class="reference internal" href="#insufficient-bit-width-parameter-to-binary-repr">Insufficient bit width parameter to <code class="docutils literal"><span class="pre">binary_repr</span></code></a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id4">Future Changes</a><ul>
+<li><a class="reference internal" href="#id7">Future Changes</a><ul>
 <li><a class="reference internal" href="#multiple-field-manipulation-of-structured-arrays">Multiple-field manipulation of structured arrays</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id5">Compatibility notes</a><ul>
-<li><a class="reference internal" href="#id6">DeprecationWarning to error</a></li>
-<li><a class="reference internal" href="#id7">FutureWarning to changed behavior</a></li>
+<li><a class="reference internal" href="#id8">Compatibility notes</a><ul>
+<li><a class="reference internal" href="#id9">DeprecationWarning to error</a></li>
+<li><a class="reference internal" href="#id10">FutureWarning to changed behavior</a></li>
 <li><a class="reference internal" href="#power-and-raise-errors-for-integer-to-negative-integer-powers"><code class="docutils literal"><span class="pre">power</span></code> and <code class="docutils literal"><span class="pre">**</span></code> raise errors for integer to negative integer powers</a></li>
 <li><a class="reference internal" href="#relaxed-stride-checking-is-the-default">Relaxed stride checking is the default</a></li>
 <li><a class="reference internal" href="#the-np-percentile-midpoint-interpolation-method-fixed-for-exact-indices">The <code class="docutils literal"><span class="pre">np.percentile</span></code> ‘midpoint’ interpolation method fixed for exact indices</a></li>
@@ -183,7 +193,7 @@
 <li><a class="reference internal" href="#c-api">C API</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id8">New Features</a><ul>
+<li><a class="reference internal" href="#id11">New Features</a><ul>
 <li><a class="reference internal" href="#writeable-keyword-argument-for-as-strided">Writeable keyword argument for <code class="docutils literal"><span class="pre">as_strided</span></code></a></li>
 <li><a class="reference internal" href="#axes-keyword-argument-for-rot90"><code class="docutils literal"><span class="pre">axes</span></code> keyword argument for <code class="docutils literal"><span class="pre">rot90</span></code></a></li>
 <li><a class="reference internal" href="#generalized-flip">Generalized <code class="docutils literal"><span class="pre">flip</span></code></a></li>
@@ -207,8 +217,8 @@
 <li><a class="reference internal" href="#numpy-sctypes-now-includes-bytes-on-python3-too">numpy.sctypes now includes bytes on Python3 too</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id9">Improvements</a><ul>
-<li><a class="reference internal" href="#id10"><code class="docutils literal"><span class="pre">bitwise_and</span></code> identity changed</a></li>
+<li><a class="reference internal" href="#id12">Improvements</a><ul>
+<li><a class="reference internal" href="#id13"><code class="docutils literal"><span class="pre">bitwise_and</span></code> identity changed</a></li>
 <li><a class="reference internal" href="#generalized-ufuncs-will-now-unlock-the-gil">Generalized Ufuncs will now unlock the GIL</a></li>
 <li><a class="reference internal" href="#caches-in-np-fft-are-now-bounded-in-total-size-and-item-count">Caches in <em class="xref py py-obj">np.fft</em> are now bounded in total size and item count</a></li>
 <li><a class="reference internal" href="#improved-handling-of-zero-width-string-unicode-dtypes">Improved handling of zero-width string/unicode dtypes</a></li>
@@ -219,7 +229,7 @@
 <li><a class="reference internal" href="#improved-precision-of-ndarray-mean-for-float16-arrays">Improved precision of <code class="docutils literal"><span class="pre">ndarray.mean</span></code> for float16 arrays</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id11">Changes</a><ul>
+<li><a class="reference internal" href="#id14">Changes</a><ul>
 <li><a class="reference internal" href="#all-array-like-methods-are-now-called-with-keyword-arguments-in-fromnumeric-py">All array-like methods are now called with keyword arguments in fromnumeric.py</a></li>
 <li><a class="reference internal" href="#operations-on-np-memmap-objects-return-numpy-arrays-in-most-cases">Operations on np.memmap objects return numpy arrays in most cases</a></li>
 <li><a class="reference internal" href="#stacklevel-of-warnings-increased">stacklevel of warnings increased</a></li>
@@ -229,11 +239,11 @@
 </li>
 <li><a class="reference internal" href="#numpy-1-11-3-release-notes">NumPy 1.11.3 Release Notes</a><ul>
 <li><a class="reference internal" href="#contributors-to-maintenance-1-11-3">Contributors to maintenance/1.11.3</a></li>
-<li><a class="reference internal" href="#pull-requests-merged">Pull Requests Merged</a></li>
+<li><a class="reference internal" href="#id15">Pull Requests Merged</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#numpy-1-11-2-release-notes">NumPy 1.11.2 Release Notes</a><ul>
-<li><a class="reference internal" href="#id12">Pull Requests Merged</a></li>
+<li><a class="reference internal" href="#id16">Pull Requests Merged</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#numpy-1-11-1-release-notes">NumPy 1.11.1 Release Notes</a><ul>
@@ -241,22 +251,22 @@
 </ul>
 </li>
 <li><a class="reference internal" href="#numpy-1-11-0-release-notes">NumPy 1.11.0 Release Notes</a><ul>
-<li><a class="reference internal" href="#id13">Highlights</a></li>
-<li><a class="reference internal" href="#id14">Build System Changes</a></li>
-<li><a class="reference internal" href="#id15">Future Changes</a></li>
-<li><a class="reference internal" href="#id16">Compatibility notes</a><ul>
+<li><a class="reference internal" href="#id17">Highlights</a></li>
+<li><a class="reference internal" href="#id18">Build System Changes</a></li>
+<li><a class="reference internal" href="#id19">Future Changes</a></li>
+<li><a class="reference internal" href="#id20">Compatibility notes</a><ul>
 <li><a class="reference internal" href="#datetime64-changes">datetime64 changes</a></li>
 <li><a class="reference internal" href="#linalg-norm-return-type-changes"><code class="docutils literal"><span class="pre">linalg.norm</span></code> return type changes</a></li>
 <li><a class="reference internal" href="#polynomial-fit-changes">polynomial fit changes</a></li>
 <li><a class="reference internal" href="#np-dot-now-raises-typeerror-instead-of-valueerror"><em>np.dot</em> now raises <code class="docutils literal"><span class="pre">TypeError</span></code> instead of <code class="docutils literal"><span class="pre">ValueError</span></code></a></li>
-<li><a class="reference internal" href="#id17">FutureWarning to changed behavior</a></li>
+<li><a class="reference internal" href="#id21">FutureWarning to changed behavior</a></li>
 <li><a class="reference internal" href="#and-operators"><code class="docutils literal"><span class="pre">%</span></code> and <code class="docutils literal"><span class="pre">//</span></code> operators</a></li>
-<li><a class="reference internal" href="#id18">C API</a></li>
+<li><a class="reference internal" href="#id22">C API</a></li>
 <li><a class="reference internal" href="#object-dtype-detection-for-old-style-classes">object dtype detection for old-style classes</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id19">New Features</a></li>
-<li><a class="reference internal" href="#id20">Improvements</a><ul>
+<li><a class="reference internal" href="#id23">New Features</a></li>
+<li><a class="reference internal" href="#id24">Improvements</a><ul>
 <li><a class="reference internal" href="#np-gradient-now-supports-an-axis-argument"><code class="docutils literal"><span class="pre">np.gradient</span></code> now supports an <code class="docutils literal"><span class="pre">axis</span></code> argument</a></li>
 <li><a class="reference internal" href="#np-lexsort-now-supports-arrays-with-object-data-type"><code class="docutils literal"><span class="pre">np.lexsort</span></code> now supports arrays with object data-type</a></li>
 <li><a class="reference internal" href="#np-ma-core-maskedarray-now-supports-an-order-argument"><code class="docutils literal"><span class="pre">np.ma.core.MaskedArray</span></code> now supports an <code class="docutils literal"><span class="pre">order</span></code> argument</a></li>
@@ -267,15 +277,15 @@
 <li><a class="reference internal" href="#speed-improvement-for-np-random-shuffle">Speed improvement for np.random.shuffle</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id21">Changes</a><ul>
+<li><a class="reference internal" href="#id25">Changes</a><ul>
 <li><a class="reference internal" href="#pyrex-support-was-removed-from-numpy-distutils">Pyrex support was removed from <code class="docutils literal"><span class="pre">numpy.distutils</span></code></a></li>
 <li><a class="reference internal" href="#np-broadcast-can-now-be-called-with-a-single-argument"><code class="docutils literal"><span class="pre">np.broadcast</span></code> can now be called with a single argument</a></li>
 <li><a class="reference internal" href="#np-trace-now-respects-array-subclasses"><code class="docutils literal"><span class="pre">np.trace</span></code> now respects array subclasses</a></li>
-<li><a class="reference internal" href="#id22"><code class="docutils literal"><span class="pre">np.dot</span></code> now raises <code class="docutils literal"><span class="pre">TypeError</span></code> instead of <code class="docutils literal"><span class="pre">ValueError</span></code></a></li>
-<li><a class="reference internal" href="#id23"><code class="docutils literal"><span class="pre">linalg.norm</span></code> return type changes</a></li>
+<li><a class="reference internal" href="#id26"><code class="docutils literal"><span class="pre">np.dot</span></code> now raises <code class="docutils literal"><span class="pre">TypeError</span></code> instead of <code class="docutils literal"><span class="pre">ValueError</span></code></a></li>
+<li><a class="reference internal" href="#id27"><code class="docutils literal"><span class="pre">linalg.norm</span></code> return type changes</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id24">Deprecations</a><ul>
+<li><a class="reference internal" href="#id28">Deprecations</a><ul>
 <li><a class="reference internal" href="#views-of-arrays-in-fortran-order">Views of arrays in Fortran order</a></li>
 <li><a class="reference internal" href="#invalid-arguments-for-array-ordering">Invalid arguments for array ordering</a></li>
 <li><a class="reference internal" href="#random-number-generator-in-the-testing-namespace">Random number generator in the <code class="docutils literal"><span class="pre">testing</span></code> namespace</a></li>
@@ -289,30 +299,30 @@
 </ul>
 </li>
 <li><a class="reference internal" href="#numpy-1-10-4-release-notes">NumPy 1.10.4 Release Notes</a><ul>
-<li><a class="reference internal" href="#id25">Compatibility notes</a></li>
+<li><a class="reference internal" href="#id29">Compatibility notes</a></li>
 <li><a class="reference internal" href="#issues-fixed">Issues Fixed</a></li>
 <li><a class="reference internal" href="#merged-prs">Merged PRs</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#numpy-1-10-3-release-notes">NumPy 1.10.3 Release Notes</a></li>
 <li><a class="reference internal" href="#numpy-1-10-2-release-notes">NumPy 1.10.2 Release Notes</a><ul>
-<li><a class="reference internal" href="#id26">Compatibility notes</a><ul>
+<li><a class="reference internal" href="#id30">Compatibility notes</a><ul>
 <li><a class="reference internal" href="#relaxed-stride-checking-is-no-longer-the-default">Relaxed stride checking is no longer the default</a></li>
 <li><a class="reference internal" href="#fix-swig-bug-in-numpy-i">Fix swig bug in <code class="docutils literal"><span class="pre">numpy.i</span></code></a></li>
 <li><a class="reference internal" href="#deprecate-views-changing-dimensions-in-fortran-order">Deprecate views changing dimensions in fortran order</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id27">Issues Fixed</a></li>
-<li><a class="reference internal" href="#id28">Merged PRs</a></li>
+<li><a class="reference internal" href="#id31">Issues Fixed</a></li>
+<li><a class="reference internal" href="#id32">Merged PRs</a></li>
 <li><a class="reference internal" href="#notes">Notes</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#numpy-1-10-1-release-notes">NumPy 1.10.1 Release Notes</a></li>
 <li><a class="reference internal" href="#numpy-1-10-0-release-notes">NumPy 1.10.0 Release Notes</a><ul>
-<li><a class="reference internal" href="#id29">Highlights</a></li>
-<li><a class="reference internal" href="#id30">Dropped Support</a></li>
-<li><a class="reference internal" href="#id31">Future Changes</a></li>
-<li><a class="reference internal" href="#id32">Compatibility notes</a><ul>
+<li><a class="reference internal" href="#id33">Highlights</a></li>
+<li><a class="reference internal" href="#id34">Dropped Support</a></li>
+<li><a class="reference internal" href="#id35">Future Changes</a></li>
+<li><a class="reference internal" href="#id36">Compatibility notes</a><ul>
 <li><a class="reference internal" href="#default-casting-rule-change">Default casting rule change</a></li>
 <li><a class="reference internal" href="#numpy-version-string">numpy version string</a></li>
 <li><a class="reference internal" href="#relaxed-stride-checking">relaxed stride checking</a></li>
@@ -320,7 +330,7 @@
 <li><a class="reference internal" href="#np-ravel-np-diagonal-and-np-diag-now-preserve-subtypes"><em>np.ravel</em>, <em>np.diagonal</em> and <em>np.diag</em> now preserve subtypes</a></li>
 <li><a class="reference internal" href="#rollaxis-and-swapaxes-always-return-a-view"><em>rollaxis</em> and <em>swapaxes</em> always return a view</a></li>
 <li><a class="reference internal" href="#nonzero-now-returns-base-ndarrays"><em>nonzero</em> now returns base ndarrays</a></li>
-<li><a class="reference internal" href="#id33">C API</a></li>
+<li><a class="reference internal" href="#id37">C API</a></li>
 <li><a class="reference internal" href="#recarray-field-return-types">recarray field return types</a></li>
 <li><a class="reference internal" href="#recarray-views">recarray views</a></li>
 <li><a class="reference internal" href="#out-keyword-argument-of-ufuncs-now-accepts-tuples-of-arrays">‘out’ keyword argument of ufuncs now accepts tuples of arrays</a></li>
@@ -330,7 +340,7 @@
 <li><a class="reference internal" href="#functions-available-from-numpy-ma-testutils-have-changed">Functions available from numpy.ma.testutils have changed</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id34">New Features</a><ul>
+<li><a class="reference internal" href="#id38">New Features</a><ul>
 <li><a class="reference internal" href="#reading-extra-flags-from-site-cfg">Reading extra flags from site.cfg</a></li>
 <li><a class="reference internal" href="#np-cbrt-to-compute-cube-root-for-real-floats"><em>np.cbrt</em> to compute cube root for real floats</a></li>
 <li><a class="reference internal" href="#numpy-distutils-now-allows-parallel-compilation">numpy.distutils now allows parallel compilation</a></li>
@@ -342,7 +352,7 @@
 <li><a class="reference internal" href="#new-argument-norm-to-fft-functions">New argument <code class="docutils literal"><span class="pre">norm</span></code> to fft functions</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id35">Improvements</a><ul>
+<li><a class="reference internal" href="#id39">Improvements</a><ul>
 <li><a class="reference internal" href="#np-digitize-using-binary-search"><em>np.digitize</em> using binary search</a></li>
 <li><a class="reference internal" href="#np-poly-now-casts-integer-inputs-to-float"><em>np.poly</em> now casts integer inputs to float</a></li>
 <li><a class="reference internal" href="#np-interp-can-now-be-used-with-periodic-functions"><em>np.interp</em> can now be used with periodic functions</a></li>
@@ -357,14 +367,14 @@
 <li><a class="reference internal" href="#maskedarray-support-for-more-complicated-base-classes">MaskedArray support for more complicated base classes</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id36">Changes</a><ul>
+<li><a class="reference internal" href="#id40">Changes</a><ul>
 <li><a class="reference internal" href="#dotblas-functionality-moved-to-multiarray">dotblas functionality moved to multiarray</a></li>
 <li><a class="reference internal" href="#stricter-check-of-gufunc-signature-compliance">stricter check of gufunc signature compliance</a></li>
 <li><a class="reference internal" href="#views-returned-from-np-einsum-are-writeable">views returned from <em>np.einsum</em> are writeable</a></li>
 <li><a class="reference internal" href="#np-argmin-skips-nat-values"><em>np.argmin</em> skips NaT values</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id37">Deprecations</a><ul>
+<li><a class="reference internal" href="#id41">Deprecations</a><ul>
 <li><a class="reference internal" href="#array-comparisons-involving-strings-or-structured-dtypes">Array comparisons involving strings or structured dtypes</a></li>
 <li><a class="reference internal" href="#safeeval">SafeEval</a></li>
 <li><a class="reference internal" href="#alterdot-restoredot">alterdot, restoredot</a></li>
@@ -376,18 +386,18 @@
 </ul>
 </li>
 <li><a class="reference internal" href="#numpy-1-9-2-release-notes">NumPy 1.9.2 Release Notes</a><ul>
-<li><a class="reference internal" href="#id38">Issues fixed</a></li>
+<li><a class="reference internal" href="#id42">Issues fixed</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#numpy-1-9-1-release-notes">NumPy 1.9.1 Release Notes</a><ul>
-<li><a class="reference internal" href="#id39">Issues fixed</a></li>
+<li><a class="reference internal" href="#id43">Issues fixed</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#numpy-1-9-0-release-notes">NumPy 1.9.0 Release Notes</a><ul>
-<li><a class="reference internal" href="#id40">Highlights</a></li>
-<li><a class="reference internal" href="#id41">Dropped Support</a></li>
-<li><a class="reference internal" href="#id42">Future Changes</a></li>
-<li><a class="reference internal" href="#id43">Compatibility notes</a><ul>
+<li><a class="reference internal" href="#id44">Highlights</a></li>
+<li><a class="reference internal" href="#id45">Dropped Support</a></li>
+<li><a class="reference internal" href="#id46">Future Changes</a></li>
+<li><a class="reference internal" href="#id47">Compatibility notes</a><ul>
 <li><a class="reference internal" href="#the-diagonal-and-diag-functions-return-readonly-views">The diagonal and diag functions return readonly views.</a></li>
 <li><a class="reference internal" href="#special-scalar-float-values-don-t-cause-upcast-to-double-anymore">Special scalar float values don’t cause upcast to double anymore</a></li>
 <li><a class="reference internal" href="#percentile-output-changes">Percentile output changes</a></li>
@@ -411,7 +421,7 @@
 <li><a class="reference internal" href="#zeros-like-for-string-dtypes-now-returns-empty-strings"><code class="docutils literal"><span class="pre">zeros_like</span></code> for string dtypes now returns empty strings</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id44">New Features</a><ul>
+<li><a class="reference internal" href="#id48">New Features</a><ul>
 <li><a class="reference internal" href="#percentile-supports-more-interpolation-options">Percentile supports more interpolation options</a></li>
 <li><a class="reference internal" href="#generalized-axis-support-for-median-and-percentile">Generalized axis support for median and percentile</a></li>
 <li><a class="reference internal" href="#dtype-parameter-added-to-np-linspace-and-np-logspace">Dtype parameter added to <code class="docutils literal"><span class="pre">np.linspace</span></code> and <code class="docutils literal"><span class="pre">np.logspace</span></code></a></li>
@@ -427,7 +437,7 @@
 <li><a class="reference internal" href="#full-broadcasting-support-for-np-cross">Full broadcasting support for <code class="docutils literal"><span class="pre">np.cross</span></code></a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id45">Improvements</a><ul>
+<li><a class="reference internal" href="#id49">Improvements</a><ul>
 <li><a class="reference internal" href="#better-numerical-stability-for-sum-in-some-cases">Better numerical stability for sum in some cases</a></li>
 <li><a class="reference internal" href="#percentile-implemented-in-terms-of-np-partition">Percentile implemented in terms of <code class="docutils literal"><span class="pre">np.partition</span></code></a></li>
 <li><a class="reference internal" href="#performance-improvement-for-np-array">Performance improvement for <code class="docutils literal"><span class="pre">np.array</span></code></a></li>
@@ -436,42 +446,42 @@
 <li><a class="reference internal" href="#covariance-check-in-np-random-multivariate-normal">Covariance check in <code class="docutils literal"><span class="pre">np.random.multivariate_normal</span></code></a></li>
 <li><a class="reference internal" href="#polynomial-classes-no-longer-template-based">Polynomial Classes no longer template based</a></li>
 <li><a class="reference internal" href="#more-gil-releases">More GIL releases</a></li>
-<li><a class="reference internal" href="#id46">MaskedArray support for more complicated base classes</a></li>
-<li><a class="reference internal" href="#id47">C-API</a></li>
+<li><a class="reference internal" href="#id50">MaskedArray support for more complicated base classes</a></li>
+<li><a class="reference internal" href="#id51">C-API</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id48">Deprecations</a><ul>
+<li><a class="reference internal" href="#id52">Deprecations</a><ul>
 <li><a class="reference internal" href="#non-integer-scalars-for-sequence-repetition">Non-integer scalars for sequence repetition</a></li>
 <li><a class="reference internal" href="#select-input-deprecations"><code class="docutils literal"><span class="pre">select</span></code> input deprecations</a></li>
 <li><a class="reference internal" href="#rank-function"><code class="docutils literal"><span class="pre">rank</span></code> function</a></li>
 <li><a class="reference internal" href="#object-array-equality-comparisons">Object array equality comparisons</a></li>
-<li><a class="reference internal" href="#id49">C-API</a></li>
+<li><a class="reference internal" href="#id53">C-API</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li><a class="reference internal" href="#numpy-1-8-2-release-notes">NumPy 1.8.2 Release Notes</a><ul>
-<li><a class="reference internal" href="#id50">Issues fixed</a></li>
+<li><a class="reference internal" href="#id54">Issues fixed</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#numpy-1-8-1-release-notes">NumPy 1.8.1 Release Notes</a><ul>
-<li><a class="reference internal" href="#id51">Issues fixed</a></li>
-<li><a class="reference internal" href="#id52">Changes</a><ul>
-<li><a class="reference internal" href="#id53">NDIter</a></li>
-<li><a class="reference internal" href="#id54">Optional reduced verbosity for np.distutils</a></li>
+<li><a class="reference internal" href="#id55">Issues fixed</a></li>
+<li><a class="reference internal" href="#id56">Changes</a><ul>
+<li><a class="reference internal" href="#id57">NDIter</a></li>
+<li><a class="reference internal" href="#id58">Optional reduced verbosity for np.distutils</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id55">Deprecations</a><ul>
-<li><a class="reference internal" href="#id56">C-API</a></li>
+<li><a class="reference internal" href="#id59">Deprecations</a><ul>
+<li><a class="reference internal" href="#id60">C-API</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li><a class="reference internal" href="#numpy-1-8-0-release-notes">NumPy 1.8.0 Release Notes</a><ul>
-<li><a class="reference internal" href="#id57">Highlights</a></li>
-<li><a class="reference internal" href="#id58">Dropped Support</a></li>
-<li><a class="reference internal" href="#id59">Future Changes</a></li>
-<li><a class="reference internal" href="#id60">Compatibility notes</a><ul>
+<li><a class="reference internal" href="#id61">Highlights</a></li>
+<li><a class="reference internal" href="#id62">Dropped Support</a></li>
+<li><a class="reference internal" href="#id63">Future Changes</a></li>
+<li><a class="reference internal" href="#id64">Compatibility notes</a><ul>
 <li><a class="reference internal" href="#npy-relaxed-strides-checking">NPY_RELAXED_STRIDES_CHECKING</a></li>
 <li><a class="reference internal" href="#binary-operations-with-non-arrays-as-second-argument">Binary operations with non-arrays as second argument</a></li>
 <li><a class="reference internal" href="#function-median-used-with-overwrite-input-only-partially-sorts-array">Function <em class="xref py py-obj">median</em> used with <em class="xref py py-obj">overwrite_input</em> only partially sorts array</a></li>
@@ -479,7 +489,7 @@
 <li><a class="reference internal" href="#runtime-warnings-when-comparing-nan-numbers">Runtime warnings when comparing NaN numbers</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id61">New Features</a><ul>
+<li><a class="reference internal" href="#id65">New Features</a><ul>
 <li><a class="reference internal" href="#support-for-linear-algebra-on-stacked-arrays">Support for linear algebra on stacked arrays</a></li>
 <li><a class="reference internal" href="#in-place-fancy-indexing-for-ufuncs">In place fancy indexing for ufuncs</a></li>
 <li><a class="reference internal" href="#new-functions-partition-and-argpartition">New functions <em class="xref py py-obj">partition</em> and <em class="xref py py-obj">argpartition</em></a></li>
@@ -491,11 +501,11 @@
 <li><a class="reference internal" href="#new-modes-for-qr">New modes for qr</a></li>
 <li><a class="reference internal" href="#new-invert-argument-to-in1d">New <em class="xref py py-obj">invert</em> argument to <em class="xref py py-obj">in1d</em></a></li>
 <li><a class="reference internal" href="#advanced-indexing-using-np-newaxis">Advanced indexing using <em class="xref py py-obj">np.newaxis</em></a></li>
-<li><a class="reference internal" href="#id62">C-API</a></li>
+<li><a class="reference internal" href="#id66">C-API</a></li>
 <li><a class="reference internal" href="#runtests-py">runtests.py</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id63">Improvements</a><ul>
+<li><a class="reference internal" href="#id67">Improvements</a><ul>
 <li><a class="reference internal" href="#io-performance-improvements">IO performance improvements</a></li>
 <li><a class="reference internal" href="#performance-improvements-to-pad">Performance improvements to <em class="xref py py-obj">pad</em></a></li>
 <li><a class="reference internal" href="#performance-improvements-to-isnan-isinf-isfinite-and-byteswap">Performance improvements to <em class="xref py py-obj">isnan</em>, <em class="xref py py-obj">isinf</em>, <em class="xref py py-obj">isfinite</em> and <em class="xref py py-obj">byteswap</em></a></li>
@@ -504,32 +514,32 @@
 <li><a class="reference internal" href="#overrideable-operand-flags-in-ufunc-c-api">Overrideable operand flags in ufunc C-API</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id64">Changes</a><ul>
+<li><a class="reference internal" href="#id68">Changes</a><ul>
 <li><a class="reference internal" href="#general">General</a></li>
 <li><a class="reference internal" href="#c-api-array-additions">C-API Array Additions</a></li>
 <li><a class="reference internal" href="#c-api-ufunc-additions">C-API Ufunc Additions</a></li>
 <li><a class="reference internal" href="#c-api-developer-improvements">C-API Developer Improvements</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id65">Deprecations</a><ul>
-<li><a class="reference internal" href="#id66">General</a></li>
+<li><a class="reference internal" href="#id69">Deprecations</a><ul>
+<li><a class="reference internal" href="#id70">General</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#authors">Authors</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#numpy-1-7-2-release-notes">NumPy 1.7.2 Release Notes</a><ul>
-<li><a class="reference internal" href="#id67">Issues fixed</a></li>
+<li><a class="reference internal" href="#id71">Issues fixed</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#numpy-1-7-1-release-notes">NumPy 1.7.1 Release Notes</a><ul>
-<li><a class="reference internal" href="#id68">Issues fixed</a></li>
+<li><a class="reference internal" href="#id72">Issues fixed</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#numpy-1-7-0-release-notes">NumPy 1.7.0 Release Notes</a><ul>
-<li><a class="reference internal" href="#id69">Highlights</a></li>
-<li><a class="reference internal" href="#id70">Compatibility notes</a></li>
-<li><a class="reference internal" href="#id71">New features</a><ul>
+<li><a class="reference internal" href="#id73">Highlights</a></li>
+<li><a class="reference internal" href="#id74">Compatibility notes</a></li>
+<li><a class="reference internal" href="#id75">New features</a><ul>
 <li><a class="reference internal" href="#reduction-ufuncs-generalize-axis-parameter">Reduction UFuncs Generalize axis= Parameter</a></li>
 <li><a class="reference internal" href="#reduction-ufuncs-new-keepdims-parameter">Reduction UFuncs New keepdims= Parameter</a></li>
 <li><a class="reference internal" href="#datetime-support">Datetime support</a></li>
@@ -539,31 +549,31 @@
 <li><a class="reference internal" href="#preliminary-multi-dimensional-support-in-the-polynomial-package">Preliminary multi-dimensional support in the polynomial package</a></li>
 <li><a class="reference internal" href="#ability-to-pad-rank-n-arrays">Ability to pad rank-n arrays</a></li>
 <li><a class="reference internal" href="#new-argument-to-searchsorted">New argument to searchsorted</a></li>
-<li><a class="reference internal" href="#id72">Build system</a></li>
-<li><a class="reference internal" href="#id73">C API</a></li>
+<li><a class="reference internal" href="#id76">Build system</a></li>
+<li><a class="reference internal" href="#id77">C API</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id74">Changes</a><ul>
-<li><a class="reference internal" href="#id75">General</a></li>
+<li><a class="reference internal" href="#id78">Changes</a><ul>
+<li><a class="reference internal" href="#id79">General</a></li>
 <li><a class="reference internal" href="#casting-rules">Casting Rules</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id76">Deprecations</a><ul>
-<li><a class="reference internal" href="#id77">General</a></li>
-<li><a class="reference internal" href="#id78">C-API</a></li>
+<li><a class="reference internal" href="#id80">Deprecations</a><ul>
+<li><a class="reference internal" href="#id81">General</a></li>
+<li><a class="reference internal" href="#id82">C-API</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li><a class="reference internal" href="#numpy-1-6-2-release-notes">NumPy 1.6.2 Release Notes</a><ul>
-<li><a class="reference internal" href="#id79">Issues fixed</a><ul>
+<li><a class="reference internal" href="#id83">Issues fixed</a><ul>
 <li><a class="reference internal" href="#numpy-core"><code class="docutils literal"><span class="pre">numpy.core</span></code></a></li>
 <li><a class="reference internal" href="#numpy-lib"><code class="docutils literal"><span class="pre">numpy.lib</span></code></a></li>
 <li><a class="reference internal" href="#numpy-distutils"><code class="docutils literal"><span class="pre">numpy.distutils</span></code></a></li>
 <li><a class="reference internal" href="#numpy-random"><code class="docutils literal"><span class="pre">numpy.random</span></code></a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id80">Changes</a><ul>
+<li><a class="reference internal" href="#id84">Changes</a><ul>
 <li><a class="reference internal" href="#numpy-f2py"><code class="docutils literal"><span class="pre">numpy.f2py</span></code></a></li>
 <li><a class="reference internal" href="#numpy-poly"><code class="docutils literal"><span class="pre">numpy.poly</span></code></a></li>
 </ul>
@@ -571,12 +581,12 @@
 </ul>
 </li>
 <li><a class="reference internal" href="#numpy-1-6-1-release-notes">NumPy 1.6.1 Release Notes</a><ul>
-<li><a class="reference internal" href="#id81">Issues Fixed</a></li>
+<li><a class="reference internal" href="#id85">Issues Fixed</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#numpy-1-6-0-release-notes">NumPy 1.6.0 Release Notes</a><ul>
-<li><a class="reference internal" href="#id82">Highlights</a></li>
-<li><a class="reference internal" href="#id83">New features</a><ul>
+<li><a class="reference internal" href="#id86">Highlights</a></li>
+<li><a class="reference internal" href="#id87">New features</a><ul>
 <li><a class="reference internal" href="#new-16-bit-floating-point-type">New 16-bit floating point type</a></li>
 <li><a class="reference internal" href="#new-iterator">New iterator</a></li>
 <li><a class="reference internal" href="#legendre-laguerre-hermite-hermitee-polynomials-in-numpy-polynomial">Legendre, Laguerre, Hermite, HermiteE polynomials in <code class="docutils literal"><span class="pre">numpy.polynomial</span></code></a></li>
@@ -584,38 +594,38 @@
 <li><a class="reference internal" href="#other-new-functions">Other new functions</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id84">Changes</a><ul>
+<li><a class="reference internal" href="#id88">Changes</a><ul>
 <li><a class="reference internal" href="#default-error-handling"><code class="docutils literal"><span class="pre">default</span> <span class="pre">error</span> <span class="pre">handling</span></code></a></li>
-<li><a class="reference internal" href="#id85"><code class="docutils literal"><span class="pre">numpy.distutils</span></code></a></li>
+<li><a class="reference internal" href="#id89"><code class="docutils literal"><span class="pre">numpy.distutils</span></code></a></li>
 <li><a class="reference internal" href="#numpy-testing"><code class="docutils literal"><span class="pre">numpy.testing</span></code></a></li>
-<li><a class="reference internal" href="#id86"><code class="docutils literal"><span class="pre">C</span> <span class="pre">API</span></code></a></li>
+<li><a class="reference internal" href="#id90"><code class="docutils literal"><span class="pre">C</span> <span class="pre">API</span></code></a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#deprecated-features">Deprecated features</a></li>
 <li><a class="reference internal" href="#removed-features">Removed features</a><ul>
 <li><a class="reference internal" href="#numpy-fft"><code class="docutils literal"><span class="pre">numpy.fft</span></code></a></li>
 <li><a class="reference internal" href="#numpy-memmap"><code class="docutils literal"><span class="pre">numpy.memmap</span></code></a></li>
-<li><a class="reference internal" href="#id87"><code class="docutils literal"><span class="pre">numpy.lib</span></code></a></li>
+<li><a class="reference internal" href="#id91"><code class="docutils literal"><span class="pre">numpy.lib</span></code></a></li>
 <li><a class="reference internal" href="#numpy-ma"><code class="docutils literal"><span class="pre">numpy.ma</span></code></a></li>
-<li><a class="reference internal" href="#id88"><code class="docutils literal"><span class="pre">numpy.distutils</span></code></a></li>
+<li><a class="reference internal" href="#id92"><code class="docutils literal"><span class="pre">numpy.distutils</span></code></a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li><a class="reference internal" href="#numpy-1-5-0-release-notes">NumPy 1.5.0 Release Notes</a><ul>
-<li><a class="reference internal" href="#id89">Highlights</a><ul>
+<li><a class="reference internal" href="#id93">Highlights</a><ul>
 <li><a class="reference internal" href="#python-3-compatibility">Python 3 compatibility</a></li>
 <li><a class="reference internal" href="#pep-3118-compatibility"><strong>PEP 3118</strong> compatibility</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id90">New features</a><ul>
+<li><a class="reference internal" href="#id94">New features</a><ul>
 <li><a class="reference internal" href="#warning-on-casting-complex-to-real">Warning on casting complex to real</a></li>
 <li><a class="reference internal" href="#dot-method-for-ndarrays">Dot method for ndarrays</a></li>
 <li><a class="reference internal" href="#linalg-slogdet-function">linalg.slogdet function</a></li>
 <li><a class="reference internal" href="#new-header">new header</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id91">Changes</a><ul>
+<li><a class="reference internal" href="#id95">Changes</a><ul>
 <li><a class="reference internal" href="#polynomial-polynomial">polynomial.polynomial</a></li>
 <li><a class="reference internal" href="#polynomial-chebyshev">polynomial.chebyshev</a></li>
 <li><a class="reference internal" href="#histogram">histogram</a></li>
@@ -625,8 +635,8 @@
 </ul>
 </li>
 <li><a class="reference internal" href="#numpy-1-4-0-release-notes">NumPy 1.4.0 Release Notes</a><ul>
-<li><a class="reference internal" href="#id92">Highlights</a></li>
-<li><a class="reference internal" href="#id93">New features</a><ul>
+<li><a class="reference internal" href="#id96">Highlights</a></li>
+<li><a class="reference internal" href="#id97">New features</a><ul>
 <li><a class="reference internal" href="#extended-array-wrapping-mechanism-for-ufuncs">Extended array wrapping mechanism for ufuncs</a></li>
 <li><a class="reference internal" href="#automatic-detection-of-forward-incompatibilities">Automatic detection of forward incompatibilities</a></li>
 <li><a class="reference internal" href="#new-iterators">New iterators</a></li>
@@ -639,8 +649,8 @@
 <li><a class="reference internal" href="#improved-set-operations">Improved set operations</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id94">Improvements</a></li>
-<li><a class="reference internal" href="#id95">Deprecations</a></li>
+<li><a class="reference internal" href="#id98">Improvements</a></li>
+<li><a class="reference internal" href="#id99">Deprecations</a></li>
 <li><a class="reference internal" href="#internal-changes">Internal changes</a><ul>
 <li><a class="reference internal" href="#use-c99-complex-functions-when-available">Use C99 complex functions when available</a></li>
 <li><a class="reference internal" href="#split-multiarray-and-umath-source-code">split multiarray and umath source code</a></li>
@@ -651,39 +661,39 @@
 </ul>
 </li>
 <li><a class="reference internal" href="#numpy-1-3-0-release-notes">NumPy 1.3.0 Release Notes</a><ul>
-<li><a class="reference internal" href="#id96">Highlights</a><ul>
+<li><a class="reference internal" href="#id100">Highlights</a><ul>
 <li><a class="reference internal" href="#python-2-6-support">Python 2.6 support</a></li>
 <li><a class="reference internal" href="#generalized-ufuncs">Generalized ufuncs</a></li>
 <li><a class="reference internal" href="#experimental-windows-64-bits-support">Experimental Windows 64 bits support</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id97">New features</a><ul>
+<li><a class="reference internal" href="#id101">New features</a><ul>
 <li><a class="reference internal" href="#formatting-issues">Formatting issues</a></li>
 <li><a class="reference internal" href="#nan-handling-in-max-min">Nan handling in max/min</a></li>
 <li><a class="reference internal" href="#nan-handling-in-sign">Nan handling in sign</a></li>
-<li><a class="reference internal" href="#id98">New ufuncs</a></li>
+<li><a class="reference internal" href="#id102">New ufuncs</a></li>
 <li><a class="reference internal" href="#masked-arrays">Masked arrays</a></li>
 <li><a class="reference internal" href="#gfortran-support-on-windows">gfortran support on windows</a></li>
 <li><a class="reference internal" href="#arch-option-for-windows-binary">Arch option for windows binary</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id99">Deprecated features</a><ul>
-<li><a class="reference internal" href="#id100">Histogram</a></li>
+<li><a class="reference internal" href="#id103">Deprecated features</a><ul>
+<li><a class="reference internal" href="#id104">Histogram</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#documentation-changes">Documentation changes</a></li>
-<li><a class="reference internal" href="#id101">New C API</a><ul>
+<li><a class="reference internal" href="#id105">New C API</a><ul>
 <li><a class="reference internal" href="#multiarray-api">Multiarray API</a></li>
 <li><a class="reference internal" href="#ufunc-api">Ufunc API</a></li>
-<li><a class="reference internal" href="#id102">New defines</a></li>
+<li><a class="reference internal" href="#id106">New defines</a></li>
 <li><a class="reference internal" href="#portable-nan-infinity-etc">Portable NAN, INFINITY, etc…</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id103">Internal changes</a><ul>
+<li><a class="reference internal" href="#id107">Internal changes</a><ul>
 <li><a class="reference internal" href="#numpy-core-math-configuration-revamp">numpy.core math configuration revamp</a></li>
 <li><a class="reference internal" href="#umath-refactor">umath refactor</a></li>
 <li><a class="reference internal" href="#improvements-to-build-warnings">Improvements to build warnings</a></li>
-<li><a class="reference internal" href="#id104">Separate core math library</a></li>
+<li><a class="reference internal" href="#id108">Separate core math library</a></li>
 <li><a class="reference internal" href="#cpu-arch-detection">CPU arch detection</a></li>
 </ul>
 </li>
@@ -710,6 +720,118 @@
             
   <div class="section" id="release-notes">
 <h1>Release Notes<a class="headerlink" href="#release-notes" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="numpy-1-13-2-release-notes">
+<h2>NumPy 1.13.2 Release Notes<a class="headerlink" href="#numpy-1-13-2-release-notes" title="Permalink to this headline">¶</a></h2>
+<p>This is a bugfix release for some problems found since 1.13.1. The most
+important fixes are for CVE-2017-12852 and temporary elision. Users of earlier
+versions of 1.13 should upgrade.</p>
+<p>The Python versions supported are 2.7 and 3.4 - 3.6. The Python 3.6 wheels
+available from PIP are built with Python 3.6.2 and should be compatible with
+all previous versions of Python 3.6. The Windows wheels are now built
+with OpenBlas instead ATLAS, which should improve the performance of the linear
+algebra functions.</p>
+<div class="section" id="contributors">
+<h3>Contributors<a class="headerlink" href="#contributors" title="Permalink to this headline">¶</a></h3>
+<p>A total of 12 people contributed to this release.  People with a “+” by their
+names contributed a patch for the first time.</p>
+<ul class="simple">
+<li>Allan Haldane</li>
+<li>Brandon Carter</li>
+<li>Charles Harris</li>
+<li>Eric Wieser</li>
+<li>Iryna Shcherbina +</li>
+<li>James Bourbeau +</li>
+<li>Jonathan Helmus</li>
+<li>Julian Taylor</li>
+<li>Matti Picus</li>
+<li>Michael Lamparski +</li>
+<li>Michael Seifert</li>
+<li>Ralf Gommers</li>
+</ul>
+</div>
+<div class="section" id="pull-requests-merged">
+<h3>Pull requests merged<a class="headerlink" href="#pull-requests-merged" title="Permalink to this headline">¶</a></h3>
+<p>A total of 20 pull requests were merged for this release.</p>
+<ul class="simple">
+<li>#9390 BUG: Return the poly1d coefficients array directly</li>
+<li>#9555 BUG: Fix regression in 1.13.x in distutils.mingw32ccompiler.</li>
+<li>#9556 BUG: Fix true_divide when dtype=np.float64 specified.</li>
+<li>#9557 DOC: Fix some rst markup in numpy/doc/basics.py.</li>
+<li>#9558 BLD: Remove -xhost flag from IntelFCompiler.</li>
+<li>#9559 DOC: Removes broken docstring example (source code, png, pdf)…</li>
+<li>#9580 BUG: Add hypot and cabs functions to WIN32 blacklist.</li>
+<li>#9732 BUG: Make scalar function elision check if temp is writeable.</li>
+<li>#9736 BUG: Various fixes to np.gradient</li>
+<li>#9742 BUG: Fix np.pad for CVE-2017-12852</li>
+<li>#9744 BUG: Check for exception in sort functions, add tests</li>
+<li>#9745 DOC: Add whitespace after “versionadded::” directive so it actually…</li>
+<li>#9746 BUG: Memory leak in np.dot of size 0</li>
+<li>#9747 BUG: Adjust gfortran version search regex</li>
+<li>#9757 BUG: Cython 0.27 breaks NumPy on Python 3.</li>
+<li>#9764 BUG: Ensure <em class="xref py py-obj">_npy_scaled_cexp{,f,l}</em> is defined when needed.</li>
+<li>#9765 BUG: PyArray_CountNonzero does not check for exceptions</li>
+<li>#9766 BUG: Fixes histogram monotonicity check for unsigned bin values</li>
+<li>#9767 BUG: Ensure consistent result dtype of count_nonzero</li>
+<li>#9771 BUG, MAINT: Fix mtrand for Cython 0.27.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="numpy-1-13-1-release-notes">
+<h2>NumPy 1.13.1 Release Notes<a class="headerlink" href="#numpy-1-13-1-release-notes" title="Permalink to this headline">¶</a></h2>
+<p>This is a bugfix release for problems found in 1.13.0. The major changes are
+fixes for the new memory overlap detection and temporary elision as well as
+reversion of the removal of the boolean binary <code class="docutils literal"><span class="pre">-</span></code> operator. Users of 1.13.0
+should upgrade.</p>
+<p>Thr Python versions supported are 2.7 and 3.4 - 3.6. Note that the Python 3.6
+wheels available from PIP are built against 3.6.1, hence will not work when
+used with 3.6.0 due to Python bug <a href="#id109"><span class="problematic" id="id110">29943_</span></a>. NumPy 1.13.2 will be released shortly
+after Python 3.6.2 is out to fix that problem. If you are using 3.6.0 the
+workaround is to upgrade to 3.6.1 or use an earlier Python version.</p>
+<div class="section" id="id2">
+<h3>Pull requests merged<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>A total of 19 pull requests were merged for this release.</p>
+<ul class="simple">
+<li>#9240 DOC: BLD: fix lots of Sphinx warnings/errors.</li>
+<li>#9255 Revert “DEP: Raise TypeError for subtract(<a href="#id111"><span class="problematic" id="id112">bool_</span></a>, <a href="#id113"><span class="problematic" id="id114">bool_</span></a>).”</li>
+<li>#9261 BUG: don’t elide into readonly and updateifcopy temporaries for…</li>
+<li>#9262 BUG: fix missing keyword rename for common block in numpy.f2py</li>
+<li>#9263 BUG: handle resize of 0d array</li>
+<li>#9267 DOC: update f2py front page and some doc build metadata.</li>
+<li>#9299 BUG: Fix Intel compilation on Unix.</li>
+<li>#9317 BUG: fix wrong ndim used in empty where check</li>
+<li>#9319 BUG: Make extensions compilable with MinGW on Py2.7</li>
+<li>#9339 BUG: Prevent crash if ufunc doc string is null</li>
+<li>#9340 BUG: umath: un-break ufunc where= when no out= is given</li>
+<li>#9371 DOC: Add isnat/positive ufunc to documentation</li>
+<li>#9372 BUG: Fix error in fromstring function from numpy.core.records…</li>
+<li>#9373 BUG: ‘)’ is printed at the end pointer of the buffer in numpy.f2py.</li>
+<li>#9374 DOC: Create NumPy 1.13.1 release notes.</li>
+<li>#9376 BUG: Prevent hang traversing ufunc userloop linked list</li>
+<li>#9377 DOC: Use x1 and x2 in the heaviside docstring.</li>
+<li>#9378 DOC: Add $PARAMS to the isnat docstring</li>
+<li>#9379 DOC: Update the 1.13.1 release notes</li>
+</ul>
+</div>
+<div class="section" id="id3">
+<h3>Contributors<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>A total of 12 people contributed to this release.  People with a “+” by their
+names contributed a patch for the first time.</p>
+<ul class="simple">
+<li>Andras Deak +</li>
+<li>Bob Eldering +</li>
+<li>Charles Harris</li>
+<li>Daniel Hrisca +</li>
+<li>Eric Wieser</li>
+<li>Joshua Leahy +</li>
+<li>Julian Taylor</li>
+<li>Michael Seifert</li>
+<li>Pauli Virtanen</li>
+<li>Ralf Gommers</li>
+<li>Roland Kaufmann</li>
+<li>Warren Weckesser</li>
+</ul>
+</div>
+</div>
 <div class="section" id="numpy-1-13-0-release-notes">
 <h2>NumPy 1.13.0 Release Notes<a class="headerlink" href="#numpy-1-13-0-release-notes" title="Permalink to this headline">¶</a></h2>
 <p>This release supports Python 2.7 and 3.4 - 3.6.</p>
@@ -1263,8 +1385,8 @@ is fixed. Wheels for Linux, Windows, and OSX can be found on pypi,</p>
 <div class="section" id="numpy-1-12-0-release-notes">
 <h2>NumPy 1.12.0 Release Notes<a class="headerlink" href="#numpy-1-12-0-release-notes" title="Permalink to this headline">¶</a></h2>
 <p>This release supports Python 2.7 and 3.4 - 3.6.</p>
-<div class="section" id="id1">
-<h3>Highlights<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id4">
+<h3>Highlights<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
 <p>The NumPy 1.12.0 release contains a large number of fixes and improvements, but
 few that stand out above all others. That makes picking out the highlights
 somewhat arbitrary but the following may be of particular interest or indicate
@@ -1292,15 +1414,15 @@ areas likely to have future consequences.</p>
 C-API compatibility layer.</li>
 </ul>
 </div>
-<div class="section" id="id2">
-<h3>Build System Changes<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id5">
+<h3>Build System Changes<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Library order is preserved, instead of being reordered to match that of
 the directories.</li>
 </ul>
 </div>
-<div class="section" id="id3">
-<h3>Deprecations<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id6">
+<h3>Deprecations<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="assignment-of-ndarray-object-s-data-attribute">
 <h4>Assignment of ndarray object’s <code class="docutils literal"><span class="pre">data</span></code> attribute<a class="headerlink" href="#assignment-of-ndarray-object-s-data-attribute" title="Permalink to this headline">¶</a></h4>
 <p>Assigning the ‘data’ attribute is an inherently unsafe operation as pointed
@@ -1321,8 +1443,8 @@ is now considered unsafe from a user perspective and will raise an error in the
 future.</p>
 </div>
 </div>
-<div class="section" id="id4">
-<h3>Future Changes<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id7">
+<h3>Future Changes<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>In 1.13 NAT will always compare False except for <code class="docutils literal"><span class="pre">NAT</span> <span class="pre">!=</span> <span class="pre">NAT</span></code>,
 which will be True.  In short, NAT will behave like NaN</li>
@@ -1358,10 +1480,10 @@ before
 assignment, e.g., <code class="docutils literal"><span class="pre">b[['x',</span> <span class="pre">'y']]</span> <span class="pre">=</span> <span class="pre">a[['y',</span> <span class="pre">'x']]</span></code>.</p>
 </div>
 </div>
-<div class="section" id="id5">
-<h3>Compatibility notes<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="id6">
-<h4>DeprecationWarning to error<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id8">
+<h3>Compatibility notes<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id9">
+<h4>DeprecationWarning to error<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
 <li>Indexing with floats raises <code class="docutils literal"><span class="pre">IndexError</span></code>,
 e.g., a[0, 0.0].</li>
@@ -1373,8 +1495,8 @@ e.g., <code class="docutils literal"><span class="pre">a[...,</span> <span class
 e.g., in <code class="docutils literal"><span class="pre">reshape</span></code>, <code class="docutils literal"><span class="pre">take</span></code>, and specifying reduce axis.</li>
 </ul>
 </div>
-<div class="section" id="id7">
-<h4>FutureWarning to changed behavior<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id10">
+<h4>FutureWarning to changed behavior<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
 <li><code class="docutils literal"><span class="pre">np.full</span></code> now returns an array of the fill-value’s dtype if no dtype is
 given, instead of defaulting to float.</li>
@@ -1482,8 +1604,8 @@ The same is true for the <code class="docutils literal"><span class="pre">deprec
 <p>No changes.</p>
 </div>
 </div>
-<div class="section" id="id8">
-<h3>New Features<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id11">
+<h3>New Features<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="writeable-keyword-argument-for-as-strided">
 <h4>Writeable keyword argument for <code class="docutils literal"><span class="pre">as_strided</span></code><a class="headerlink" href="#writeable-keyword-argument-for-as-strided" title="Permalink to this headline">¶</a></h4>
 <p><code class="docutils literal"><span class="pre">np.lib.stride_tricks.as_strided</span></code> now has a <code class="docutils literal"><span class="pre">writeable</span></code>
@@ -1645,10 +1767,10 @@ With this version, numpy will emit a similar warning:</p>
 (unicode) on Python3.</p>
 </div>
 </div>
-<div class="section" id="id9">
-<h3>Improvements<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="id10">
-<h4><code class="docutils literal"><span class="pre">bitwise_and</span></code> identity changed<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id12">
+<h3>Improvements<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id13">
+<h4><code class="docutils literal"><span class="pre">bitwise_and</span></code> identity changed<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h4>
 <p>The previous identity was 1 with the result that all bits except the LSB were
 masked out when the reduce method was used.  The new identity is -1, which
 should work properly on twos complement machines as all bits will be set to
@@ -1714,8 +1836,8 @@ where the precision of float16 is adequate and its smaller footprint is
 desirable.</p>
 </div>
 </div>
-<div class="section" id="id11">
-<h3>Changes<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id14">
+<h3>Changes<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="all-array-like-methods-are-now-called-with-keyword-arguments-in-fromnumeric-py">
 <h4>All array-like methods are now called with keyword arguments in fromnumeric.py<a class="headerlink" href="#all-array-like-methods-are-now-called-with-keyword-arguments-in-fromnumeric-py" title="Permalink to this headline">¶</a></h4>
 <p>Internally, many array-like methods in fromnumeric.py were being called with
@@ -1762,8 +1884,8 @@ names contributed a patch for the first time.</p>
 <li>Pavel Potocek +</li>
 </ul>
 </div>
-<div class="section" id="pull-requests-merged">
-<h3>Pull Requests Merged<a class="headerlink" href="#pull-requests-merged" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id15">
+<h3>Pull Requests Merged<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><a class="reference external" href="https://github.com/numpy/numpy/pull/8341">#8341</a>: BUG: Fix ndarray.tofile large file corruption in append mode.</li>
 <li><a class="reference external" href="https://github.com/numpy/numpy/pull/8346">#8346</a>: TST: Fix tests in PR #8341 for NumPy 1.11.x</li>
@@ -1775,8 +1897,8 @@ names contributed a patch for the first time.</p>
 <p>Numpy 1.11.2 supports Python 2.6 - 2.7 and 3.2 - 3.5. It fixes bugs and
 regressions found in Numpy 1.11.1 and includes several build related
 improvements. Wheels for Linux, Windows, and OS X can be found on PyPI.</p>
-<div class="section" id="id12">
-<h3>Pull Requests Merged<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id16">
+<h3>Pull Requests Merged<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h3>
 <p>Fixes overridden by later merges and release notes updates are omitted.</p>
 <ul class="simple">
 <li>#7736 BUG: Many functions silently drop ‘keepdims’ kwarg.</li>
@@ -1849,8 +1971,8 @@ below as they may have subtle effects.</p>
 <p>No Windows (TM) binaries are provided for this release due to a broken
 toolchain. One of the providers of Python packages for Windows (TM) is your
 best bet.</p>
-<div class="section" id="id13">
-<h3>Highlights<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id17">
+<h3>Highlights<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h3>
 <p>Details of these improvements can be found below.</p>
 <ul class="simple">
 <li>The datetime64 type is now timezone naive.</li>
@@ -1861,8 +1983,8 @@ best bet.</p>
 <li>New function <code class="docutils literal"><span class="pre">np.moveaxis</span></code> for reordering array axes.</li>
 </ul>
 </div>
-<div class="section" id="id14">
-<h3>Build System Changes<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id18">
+<h3>Build System Changes<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Numpy now uses <code class="docutils literal"><span class="pre">setuptools</span></code> for its builds instead of plain distutils.
 This fixes usage of <code class="docutils literal"><span class="pre">install_requires='numpy'</span></code> in the <code class="docutils literal"><span class="pre">setup.py</span></code> files of
@@ -1873,8 +1995,8 @@ unexpected behavior on the Numpy issue tracker.</li>
 <li>Single file build support and related files have been removed.</li>
 </ul>
 </div>
-<div class="section" id="id15">
-<h3>Future Changes<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id19">
+<h3>Future Changes<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h3>
 <p>The following changes are scheduled for Numpy 1.12.0.</p>
 <ul class="simple">
 <li>Support for Python 2.6, 3.2, and 3.3 will be dropped.</li>
@@ -1910,8 +2032,8 @@ not propagate to the original mask. See the FutureWarnings section below for
 details.</li>
 </ul>
 </div>
-<div class="section" id="id16">
-<h3>Compatibility notes<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id20">
+<h3>Compatibility notes<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="datetime64-changes">
 <h4>datetime64 changes<a class="headerlink" href="#datetime64-changes" title="Permalink to this headline">¶</a></h4>
 <p>In prior versions of NumPy the experimental datetime64 type always stored
@@ -1961,8 +2083,8 @@ arguments cannot be cast to a common type, it could have raised a <code class="d
 or <code class="docutils literal"><span class="pre">ValueError</span></code> depending on their order. Now, <code class="docutils literal"><span class="pre">np.dot</span></code> will now always
 raise a <code class="docutils literal"><span class="pre">TypeError</span></code>.</p>
 </div>
-<div class="section" id="id17">
-<h4>FutureWarning to changed behavior<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id21">
+<h4>FutureWarning to changed behavior<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
 <li>In <code class="docutils literal"><span class="pre">np.lib.split</span></code> an empty array in the result always had dimension
 <code class="docutils literal"><span class="pre">(0,)</span></code> no matter the dimensions of the array being split. This
@@ -1985,8 +2107,8 @@ is always returned for both functions when the divisor is zero,
 <code class="docutils literal"><span class="pre">divmod(1.0,</span> <span class="pre">inf)</span></code> returns <code class="docutils literal"><span class="pre">(0.0,</span> <span class="pre">1.0)</span></code> except on MSVC 2008, and
 <code class="docutils literal"><span class="pre">divmod(-1.0,</span> <span class="pre">inf)</span></code> returns <code class="docutils literal"><span class="pre">(-1.0,</span> <span class="pre">inf)</span></code>.</p>
 </div>
-<div class="section" id="id18">
-<h4>C API<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id22">
+<h4>C API<a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h4>
 <p>Removed the <code class="docutils literal"><span class="pre">check_return</span></code> and <code class="docutils literal"><span class="pre">inner_loop_selector</span></code> members of
 the <code class="docutils literal"><span class="pre">PyUFuncObject</span></code> struct (replacing them with <code class="docutils literal"><span class="pre">reserved</span></code> slots
 to preserve struct layout). These were never used for anything, so
@@ -2002,8 +2124,8 @@ they define both a <em class="xref py py-obj">__len__</em> and a <em class="xref
 and inconsistency between python 2 and 3.</p>
 </div>
 </div>
-<div class="section" id="id19">
-<h3>New Features<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id23">
+<h3>New Features<a class="headerlink" href="#id23" title="Permalink to this headline">¶</a></h3>
 <ul>
 <li><p class="first"><code class="docutils literal"><span class="pre">np.histogram</span></code> now provides plugin estimators for automatically
 estimating the optimal number of bins. Passing one of [‘auto’, ‘fd’,
@@ -2060,8 +2182,8 @@ been added to the npy_math library.</p>
 </li>
 </ul>
 </div>
-<div class="section" id="id20">
-<h3>Improvements<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id24">
+<h3>Improvements<a class="headerlink" href="#id24" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="np-gradient-now-supports-an-axis-argument">
 <h4><code class="docutils literal"><span class="pre">np.gradient</span></code> now supports an <code class="docutils literal"><span class="pre">axis</span></code> argument<a class="headerlink" href="#np-gradient-now-supports-an-axis-argument" title="Permalink to this headline">¶</a></h4>
 <p>The <code class="docutils literal"><span class="pre">axis</span></code> parameter was added to <code class="docutils literal"><span class="pre">np.gradient</span></code> for consistency.  It
@@ -2109,8 +2231,8 @@ extended to <code class="docutils literal"><span class="pre">&#64;</span></code>
 <p><code class="docutils literal"><span class="pre">np.random.shuffle</span></code> is now much faster for 1d ndarrays.</p>
 </div>
 </div>
-<div class="section" id="id21">
-<h3>Changes<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id25">
+<h3>Changes<a class="headerlink" href="#id25" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="pyrex-support-was-removed-from-numpy-distutils">
 <h4>Pyrex support was removed from <code class="docutils literal"><span class="pre">numpy.distutils</span></code><a class="headerlink" href="#pyrex-support-was-removed-from-numpy-distutils" title="Permalink to this headline">¶</a></h4>
 <p>The method <code class="docutils literal"><span class="pre">build_src.generate_a_pyrex_source</span></code> will remain available; it
@@ -2138,23 +2260,23 @@ a single array. This change obsoletes distinctions like</p>
 ensures, e.g., that for masked arrays <code class="docutils literal"><span class="pre">np.trace(ma)</span></code> and <code class="docutils literal"><span class="pre">ma.trace()</span></code> give
 the same result.</p>
 </div>
-<div class="section" id="id22">
-<h4><code class="docutils literal"><span class="pre">np.dot</span></code> now raises <code class="docutils literal"><span class="pre">TypeError</span></code> instead of <code class="docutils literal"><span class="pre">ValueError</span></code><a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id26">
+<h4><code class="docutils literal"><span class="pre">np.dot</span></code> now raises <code class="docutils literal"><span class="pre">TypeError</span></code> instead of <code class="docutils literal"><span class="pre">ValueError</span></code><a class="headerlink" href="#id26" title="Permalink to this headline">¶</a></h4>
 <p>This behaviour mimics that of other functions such as <code class="docutils literal"><span class="pre">np.inner</span></code>. If the two
 arguments cannot be cast to a common type, it could have raised a <code class="docutils literal"><span class="pre">TypeError</span></code>
 or <code class="docutils literal"><span class="pre">ValueError</span></code> depending on their order. Now, <code class="docutils literal"><span class="pre">np.dot</span></code> will now always
 raise a <code class="docutils literal"><span class="pre">TypeError</span></code>.</p>
 </div>
-<div class="section" id="id23">
-<h4><code class="docutils literal"><span class="pre">linalg.norm</span></code> return type changes<a class="headerlink" href="#id23" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id27">
+<h4><code class="docutils literal"><span class="pre">linalg.norm</span></code> return type changes<a class="headerlink" href="#id27" title="Permalink to this headline">¶</a></h4>
 <p>The <code class="docutils literal"><span class="pre">linalg.norm</span></code> function now does all its computations in floating point
 and returns floating results. This change fixes bugs due to integer overflow
 and the failure of abs with signed integers of minimum value, e.g., int8(-128).
 For consistancy, floats are used even where an integer might work.</p>
 </div>
 </div>
-<div class="section" id="id24">
-<h3>Deprecations<a class="headerlink" href="#id24" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id28">
+<h3>Deprecations<a class="headerlink" href="#id28" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="views-of-arrays-in-fortran-order">
 <h4>Views of arrays in Fortran order<a class="headerlink" href="#views-of-arrays-in-fortran-order" title="Permalink to this headline">¶</a></h4>
 <p>The F_CONTIGUOUS flag was used to signal that views using a dtype that
@@ -2228,8 +2350,8 @@ No windows binaries are provided for this release, as there appear to be
 bugs in the toolchain we use to generate those files. Hopefully that
 problem will be fixed for the next release. In the meantime, we suggest
 using one of the providers of windows binaries.</p>
-<div class="section" id="id25">
-<h3>Compatibility notes<a class="headerlink" href="#id25" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id29">
+<h3>Compatibility notes<a class="headerlink" href="#id29" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>The trace function now calls the trace method on subclasses of ndarray,
 except for matrix, for which the current behavior is preserved. This is
@@ -2271,8 +2393,8 @@ the PR number for the original PR against master is listed.</p>
 <p>This release deals with a number of bugs that turned up in 1.10.1 and
 adds various build and release improvements.</p>
 <p>Numpy 1.10.1 supports Python 2.6 - 2.7 and 3.2 - 3.5.</p>
-<div class="section" id="id26">
-<h3>Compatibility notes<a class="headerlink" href="#id26" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id30">
+<h3>Compatibility notes<a class="headerlink" href="#id30" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="relaxed-stride-checking-is-no-longer-the-default">
 <h4>Relaxed stride checking is no longer the default<a class="headerlink" href="#relaxed-stride-checking-is-no-longer-the-default" title="Permalink to this headline">¶</a></h4>
 <p>There were back compatibility problems involving views changing the dtype of
@@ -2299,8 +2421,8 @@ exclusive for non-scalar arrays of ndim &gt; 1. This deprecation prepares the
 way to always enable relaxed stride checking.</p>
 </div>
 </div>
-<div class="section" id="id27">
-<h3>Issues Fixed<a class="headerlink" href="#id27" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id31">
+<h3>Issues Fixed<a class="headerlink" href="#id31" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>gh-6019 Masked array repr fails for structured array with multi-dimensional column.</li>
 <li>gh-6462 Median of empty array produces IndexError.</li>
@@ -2333,8 +2455,8 @@ way to always enable relaxed stride checking.</p>
 <li>gh-6807 Windows testing errors for 1.10.2</li>
 </ul>
 </div>
-<div class="section" id="id28">
-<h3>Merged PRs<a class="headerlink" href="#id28" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id32">
+<h3>Merged PRs<a class="headerlink" href="#id32" title="Permalink to this headline">¶</a></h3>
 <p>The following PRs have been merged into 1.10.2. When the PR is a backport,
 the PR number for the original PR against master is listed.</p>
 <ul class="simple">
@@ -2453,8 +2575,8 @@ c38bc08 DOC: fix var. reference in percentile docstring
 <div class="section" id="numpy-1-10-0-release-notes">
 <h2>NumPy 1.10.0 Release Notes<a class="headerlink" href="#numpy-1-10-0-release-notes" title="Permalink to this headline">¶</a></h2>
 <p>This release supports Python 2.6 - 2.7 and 3.2 - 3.5.</p>
-<div class="section" id="id29">
-<h3>Highlights<a class="headerlink" href="#id29" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id33">
+<h3>Highlights<a class="headerlink" href="#id33" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>numpy.distutils now supports parallel compilation via the –parallel/-j
 argument passed to setup.py build</li>
@@ -2471,8 +2593,8 @@ joining along an existing axis.</li>
 <li>Support for the ‘&#64;’ operator in Python 3.5.</li>
 </ul>
 </div>
-<div class="section" id="id30">
-<h3>Dropped Support<a class="headerlink" href="#id30" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id34">
+<h3>Dropped Support<a class="headerlink" href="#id34" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>The _dotblas module has been removed. CBLAS Support is now in
 Multiarray.</li>
@@ -2488,8 +2610,8 @@ numpy/distutils/command/config.py</li>
 <li>Keyword <code class="docutils literal"><span class="pre">old_behavior</span></code> removed from np.correlate.</li>
 </ul>
 </div>
-<div class="section" id="id31">
-<h3>Future Changes<a class="headerlink" href="#id31" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id35">
+<h3>Future Changes<a class="headerlink" href="#id35" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>In array comparisons like <code class="docutils literal"><span class="pre">arr1</span> <span class="pre">==</span> <span class="pre">arr2</span></code>, many corner cases
 involving strings or structured dtypes that used to return scalars
@@ -2507,8 +2629,8 @@ already preserved.</li>
 </ul>
 <p>See below for more details on these changes.</p>
 </div>
-<div class="section" id="id32">
-<h3>Compatibility notes<a class="headerlink" href="#id32" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id36">
+<h3>Compatibility notes<a class="headerlink" href="#id36" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="default-casting-rule-change">
 <h4>Default casting rule change<a class="headerlink" href="#default-casting-rule-change" title="Permalink to this headline">¶</a></h4>
 <p>Default casting for inplace operations has changed to <code class="docutils literal"><span class="pre">'same_kind'</span></code>. For
@@ -2563,8 +2685,8 @@ Behavior has been unified, and the return will now be a base ndarray.
 Subclasses can still override this behavior by providing their own
 <em>nonzero</em> method.</p>
 </div>
-<div class="section" id="id33">
-<h4>C API<a class="headerlink" href="#id33" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id37">
+<h4>C API<a class="headerlink" href="#id37" title="Permalink to this headline">¶</a></h4>
 <p>The changes to <em>swapaxes</em> also apply to the <em>PyArray_SwapAxes</em> C function,
 which now returns a view in all cases.</p>
 <p>The changes to <em>nonzero</em> also apply to the <em>PyArray_Nonzero</em> C function,
@@ -2627,8 +2749,8 @@ backward compatibility. In the long run this should help avoid mistaken use
 of the wrong functions, but it may cause import problems for some.</p>
 </div>
 </div>
-<div class="section" id="id34">
-<h3>New Features<a class="headerlink" href="#id34" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id38">
+<h3>New Features<a class="headerlink" href="#id38" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="reading-extra-flags-from-site-cfg">
 <h4>Reading extra flags from site.cfg<a class="headerlink" href="#reading-extra-flags-from-site-cfg" title="Permalink to this headline">¶</a></h4>
 <p>Previously customization of compilation of dependency libraries and numpy
@@ -2710,8 +2832,8 @@ transforms by setting the keyword argument <code class="docutils literal"><span 
 <img class="math" src="_images/math/1d8320271cac17d5deccc0cc7848bd62dd458b04.png" alt="1/\\sqrt{n}" style="vertical-align: -3px"/>.</p>
 </div>
 </div>
-<div class="section" id="id35">
-<h3>Improvements<a class="headerlink" href="#id35" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id39">
+<h3>Improvements<a class="headerlink" href="#id39" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="np-digitize-using-binary-search">
 <h4><em>np.digitize</em> using binary search<a class="headerlink" href="#np-digitize-using-binary-search" title="Permalink to this headline">¶</a></h4>
 <p><em>np.digitize</em> is now implemented in terms of <em>np.searchsorted</em>. This means
@@ -2798,8 +2920,8 @@ baseclass overrides of <code class="docutils literal"><span class="pre">__setite
 will respect overrides of <code class="docutils literal"><span class="pre">__add__</span></code>, <code class="docutils literal"><span class="pre">__sub__</span></code>, etc.</p>
 </div>
 </div>
-<div class="section" id="id36">
-<h3>Changes<a class="headerlink" href="#id36" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id40">
+<h3>Changes<a class="headerlink" href="#id40" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="dotblas-functionality-moved-to-multiarray">
 <h4>dotblas functionality moved to multiarray<a class="headerlink" href="#dotblas-functionality-moved-to-multiarray" title="Permalink to this headline">¶</a></h4>
 <p>The cblas versions of dot, inner, and vdot have been integrated into
@@ -2825,8 +2947,8 @@ array is writeable.</p>
 making it consistent with <em>np.min</em>, <em>np.argmax</em> and <em>np.max</em>.</p>
 </div>
 </div>
-<div class="section" id="id37">
-<h3>Deprecations<a class="headerlink" href="#id37" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id41">
+<h3>Deprecations<a class="headerlink" href="#id41" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="array-comparisons-involving-strings-or-structured-dtypes">
 <h4>Array comparisons involving strings or structured dtypes<a class="headerlink" href="#array-comparisons-involving-strings-or-structured-dtypes" title="Permalink to this headline">¶</a></h4>
 <p>Normally, comparison operations on arrays perform elementwise
@@ -2907,8 +3029,8 @@ before.</p>
 <div class="section" id="numpy-1-9-2-release-notes">
 <h2>NumPy 1.9.2 Release Notes<a class="headerlink" href="#numpy-1-9-2-release-notes" title="Permalink to this headline">¶</a></h2>
 <p>This is a bugfix only release in the 1.9.x series.</p>
-<div class="section" id="id38">
-<h3>Issues fixed<a class="headerlink" href="#id38" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id42">
+<h3>Issues fixed<a class="headerlink" href="#id42" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><a class="reference external" href="https://github.com/numpy/numpy/issues/5316">#5316</a>: fix too large dtype alignment of strings and complex types</li>
 <li><a class="reference external" href="https://github.com/numpy/numpy/issues/5424">#5424</a>: fix ma.median when used on ndarrays</li>
@@ -2933,8 +3055,8 @@ before.</p>
 <div class="section" id="numpy-1-9-1-release-notes">
 <h2>NumPy 1.9.1 Release Notes<a class="headerlink" href="#numpy-1-9-1-release-notes" title="Permalink to this headline">¶</a></h2>
 <p>This is a bugfix only release in the 1.9.x series.</p>
-<div class="section" id="id39">
-<h3>Issues fixed<a class="headerlink" href="#id39" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id43">
+<h3>Issues fixed<a class="headerlink" href="#id43" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>gh-5184: restore linear edge behaviour of gradient to as it was in &lt; 1.9.
 The second order behaviour is available via the <em class="xref py py-obj">edge_order</em> keyword</li>
@@ -2967,8 +3089,8 @@ The second order behaviour is available via the <em class="xref py py-obj">edge_
 <div class="section" id="numpy-1-9-0-release-notes">
 <h2>NumPy 1.9.0 Release Notes<a class="headerlink" href="#numpy-1-9-0-release-notes" title="Permalink to this headline">¶</a></h2>
 <p>This release supports Python 2.6 - 2.7 and 3.2 - 3.4.</p>
-<div class="section" id="id40">
-<h3>Highlights<a class="headerlink" href="#id40" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id44">
+<h3>Highlights<a class="headerlink" href="#id44" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Numerous performance improvements in various areas, most notably indexing and
 operations on small arrays are significantly faster.
@@ -2976,8 +3098,8 @@ Indexing operations now also release the GIL.</li>
 <li>Addition of <em class="xref py py-obj">nanmedian</em> and <em class="xref py py-obj">nanpercentile</em> rounds out the nanfunction set.</li>
 </ul>
 </div>
-<div class="section" id="id41">
-<h3>Dropped Support<a class="headerlink" href="#id41" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id45">
+<h3>Dropped Support<a class="headerlink" href="#id45" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>The oldnumeric and numarray modules have been removed.</li>
 <li>The doc/pyrex and doc/cython directories have been removed.</li>
@@ -2986,8 +3108,8 @@ Indexing operations now also release the GIL.</li>
 the importall function it contained.</li>
 </ul>
 </div>
-<div class="section" id="id42">
-<h3>Future Changes<a class="headerlink" href="#id42" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id46">
+<h3>Future Changes<a class="headerlink" href="#id46" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>The numpy/polynomial/polytemplate.py file will be removed in NumPy 1.10.0.</li>
 <li>Default casting for inplace operations will change to ‘same_kind’ in
@@ -3001,8 +3123,8 @@ NumpyVersion class has been added that can be used for such comparisons.</li>
 instead of bytes, in Python 3 these two types are very different.</li>
 </ul>
 </div>
-<div class="section" id="id43">
-<h3>Compatibility notes<a class="headerlink" href="#id43" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id47">
+<h3>Compatibility notes<a class="headerlink" href="#id47" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="the-diagonal-and-diag-functions-return-readonly-views">
 <h4>The diagonal and diag functions return readonly views.<a class="headerlink" href="#the-diagonal-and-diag-functions-return-readonly-views" title="Permalink to this headline">¶</a></h4>
 <p>In NumPy 1.8, the diagonal and diag functions returned readonly copies, in
@@ -3199,8 +3321,8 @@ a problem cannot occur.</p>
 with empty strings instead of an array filled with <em class="xref py py-obj">‘0’</em>.</p>
 </div>
 </div>
-<div class="section" id="id44">
-<h3>New Features<a class="headerlink" href="#id44" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id48">
+<h3>New Features<a class="headerlink" href="#id48" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="percentile-supports-more-interpolation-options">
 <h4>Percentile supports more interpolation options<a class="headerlink" href="#percentile-supports-more-interpolation-options" title="Permalink to this headline">¶</a></h4>
 <p><code class="docutils literal"><span class="pre">np.percentile</span></code> now has the interpolation keyword argument to specify in
@@ -3279,8 +3401,8 @@ have different number of dimensions. In earlier versions this would result
 in either an error being raised, or wrong results computed.</p>
 </div>
 </div>
-<div class="section" id="id45">
-<h3>Improvements<a class="headerlink" href="#id45" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id49">
+<h3>Improvements<a class="headerlink" href="#id49" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="better-numerical-stability-for-sum-in-some-cases">
 <h4>Better numerical stability for sum in some cases<a class="headerlink" href="#better-numerical-stability-for-sum-in-some-cases" title="Permalink to this headline">¶</a></h4>
 <p>Pairwise summation is now used in the sum method, but only along the fast
@@ -3332,17 +3454,17 @@ efficient parallelization using the <code class="docutils literal"><span class="
 now released for fancy indexing, <code class="docutils literal"><span class="pre">np.where</span></code> and the <code class="docutils literal"><span class="pre">random</span></code> module now
 uses a per-state lock instead of the GIL.</p>
 </div>
-<div class="section" id="id46">
-<h4>MaskedArray support for more complicated base classes<a class="headerlink" href="#id46" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id50">
+<h4>MaskedArray support for more complicated base classes<a class="headerlink" href="#id50" title="Permalink to this headline">¶</a></h4>
 <p>Built-in assumptions that the baseclass behaved like a plain array are being
 removed. In particalur, <code class="docutils literal"><span class="pre">repr</span></code> and <code class="docutils literal"><span class="pre">str</span></code> should now work more reliably.</p>
 </div>
-<div class="section" id="id47">
-<h4>C-API<a class="headerlink" href="#id47" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id51">
+<h4>C-API<a class="headerlink" href="#id51" title="Permalink to this headline">¶</a></h4>
 </div>
 </div>
-<div class="section" id="id48">
-<h3>Deprecations<a class="headerlink" href="#id48" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id52">
+<h3>Deprecations<a class="headerlink" href="#id52" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="non-integer-scalars-for-sequence-repetition">
 <h4>Non-integer scalars for sequence repetition<a class="headerlink" href="#non-integer-scalars-for-sequence-repetition" title="Permalink to this headline">¶</a></h4>
 <p>Using non-integer numpy scalars to repeat python sequences is deprecated.
@@ -3376,8 +3498,8 @@ if broadcasting or element comparisons, etc. fails.</p>
 instead of just returning False. Code should be using <em class="xref py py-obj">arr is None</em>.</p>
 <p>All of these changes will give Deprecation- or FutureWarnings at this time.</p>
 </div>
-<div class="section" id="id49">
-<h4>C-API<a class="headerlink" href="#id49" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id53">
+<h4>C-API<a class="headerlink" href="#id53" title="Permalink to this headline">¶</a></h4>
 <p>The utility function npy_PyFile_Dup and npy_PyFile_DupClose are broken by the
 internal buffering python 3 applies to its file objects.
 To fix this two new functions npy_PyFile_Dup2 and npy_PyFile_DupClose2 are
@@ -3391,8 +3513,8 @@ the python API when possible.</p>
 <div class="section" id="numpy-1-8-2-release-notes">
 <h2>NumPy 1.8.2 Release Notes<a class="headerlink" href="#numpy-1-8-2-release-notes" title="Permalink to this headline">¶</a></h2>
 <p>This is a bugfix only release in the 1.8.x series.</p>
-<div class="section" id="id50">
-<h3>Issues fixed<a class="headerlink" href="#id50" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id54">
+<h3>Issues fixed<a class="headerlink" href="#id54" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>gh-4836: partition produces wrong results for multiple selections in equal ranges</li>
 <li>gh-4656: Make fftpack._raw_fft threadsafe</li>
@@ -3411,8 +3533,8 @@ the python API when possible.</p>
 <div class="section" id="numpy-1-8-1-release-notes">
 <h2>NumPy 1.8.1 Release Notes<a class="headerlink" href="#numpy-1-8-1-release-notes" title="Permalink to this headline">¶</a></h2>
 <p>This is a bugfix only release in the 1.8.x series.</p>
-<div class="section" id="id51">
-<h3>Issues fixed<a class="headerlink" href="#id51" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id55">
+<h3>Issues fixed<a class="headerlink" href="#id55" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>gh-4276: Fix mean, var, std methods for object arrays</li>
 <li>gh-4262: remove insecure mktemp usage</li>
@@ -3463,10 +3585,10 @@ the python API when possible.</p>
 <li>gh-4134: uninitialized use for for size 1 object reductions</li>
 </ul>
 </div>
-<div class="section" id="id52">
-<h3>Changes<a class="headerlink" href="#id52" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="id53">
-<h4>NDIter<a class="headerlink" href="#id53" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id56">
+<h3>Changes<a class="headerlink" href="#id56" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id57">
+<h4>NDIter<a class="headerlink" href="#id57" title="Permalink to this headline">¶</a></h4>
 <p>When <code class="docutils literal"><span class="pre">NpyIter_RemoveAxis</span></code> is now called, the iterator range will be reset.</p>
 <p>When a multi index is being tracked and an iterator is not buffered, it is
 possible to use <code class="docutils literal"><span class="pre">NpyIter_RemoveAxis</span></code>. In this case an iterator can shrink
@@ -3479,18 +3601,18 @@ of checking for an error return if these conditions can occur. In most
 cases the arrays being iterated are as large as the iterator so that such
 a problem cannot occur.</p>
 </div>
-<div class="section" id="id54">
-<h4>Optional reduced verbosity for np.distutils<a class="headerlink" href="#id54" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id58">
+<h4>Optional reduced verbosity for np.distutils<a class="headerlink" href="#id58" title="Permalink to this headline">¶</a></h4>
 <p>Set <code class="docutils literal"><span class="pre">numpy.distutils.system_info.system_info.verbosity</span> <span class="pre">=</span> <span class="pre">0</span></code> and then
 calls to <code class="docutils literal"><span class="pre">numpy.distutils.system_info.get_info('blas_opt')</span></code> will not
 print anything on the output. This is mostly for other packages using
 numpy.distutils.</p>
 </div>
 </div>
-<div class="section" id="id55">
-<h3>Deprecations<a class="headerlink" href="#id55" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="id56">
-<h4>C-API<a class="headerlink" href="#id56" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id59">
+<h3>Deprecations<a class="headerlink" href="#id59" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id60">
+<h4>C-API<a class="headerlink" href="#id60" title="Permalink to this headline">¶</a></h4>
 <p>The utility function npy_PyFile_Dup and npy_PyFile_DupClose are broken by the
 internal buffering python 3 applies to its file objects.
 To fix this two new functions npy_PyFile_Dup2 and npy_PyFile_DupClose2 are
@@ -3503,8 +3625,8 @@ the python API when possible.</p>
 <div class="section" id="numpy-1-8-0-release-notes">
 <h2>NumPy 1.8.0 Release Notes<a class="headerlink" href="#numpy-1-8-0-release-notes" title="Permalink to this headline">¶</a></h2>
 <p>This release supports  Python 2.6 -2.7 and 3.2 - 3.3.</p>
-<div class="section" id="id57">
-<h3>Highlights<a class="headerlink" href="#id57" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id61">
+<h3>Highlights<a class="headerlink" href="#id61" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>New, no 2to3, Python 2 and Python 3 are supported by a common code base.</li>
 <li>New, gufuncs for linear algebra, enabling operations on stacked arrays.</li>
@@ -3516,13 +3638,13 @@ the python API when possible.</p>
 <li>Numerous performance improvements in many areas.</li>
 </ul>
 </div>
-<div class="section" id="id58">
-<h3>Dropped Support<a class="headerlink" href="#id58" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id62">
+<h3>Dropped Support<a class="headerlink" href="#id62" title="Permalink to this headline">¶</a></h3>
 <p>Support for Python versions 2.4 and 2.5 has been dropped,</p>
 <p>Support for SCons has been removed.</p>
 </div>
-<div class="section" id="id59">
-<h3>Future Changes<a class="headerlink" href="#id59" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id63">
+<h3>Future Changes<a class="headerlink" href="#id63" title="Permalink to this headline">¶</a></h3>
 <p>The Datetime64 type remains experimental in this release. In 1.9 there will
 probably be some changes to make it more useable.</p>
 <p>The diagonal method currently returns a new array and raises a
@@ -3533,8 +3655,8 @@ readonly view.</p>
 <p>The numpy/oldnumeric and numpy/numarray compatibility modules will be
 removed in 1.9.</p>
 </div>
-<div class="section" id="id60">
-<h3>Compatibility notes<a class="headerlink" href="#id60" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id64">
+<h3>Compatibility notes<a class="headerlink" href="#id64" title="Permalink to this headline">¶</a></h3>
 <p>The doc/sphinxext content has been moved into its own github repository,
 and is included in numpy as a submodule. See the instructions in
 doc/HOWTO_BUILD_DOCS.rst.txt for how to access the content.</p>
@@ -3624,8 +3746,8 @@ E.g.:</p>
 </div>
 </div>
 </div>
-<div class="section" id="id61">
-<h3>New Features<a class="headerlink" href="#id61" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id65">
+<h3>New Features<a class="headerlink" href="#id65" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="support-for-linear-algebra-on-stacked-arrays">
 <h4>Support for linear algebra on stacked arrays<a class="headerlink" href="#support-for-linear-algebra-on-stacked-arrays" title="Permalink to this headline">¶</a></h4>
 <p>The gufunc machinery is now used for np.linalg, allowing operations on
@@ -3721,8 +3843,8 @@ arrays instead of only in simple indices. This means that
 <code class="docutils literal"><span class="pre">array[np.newaxis,</span> <span class="pre">[0,</span> <span class="pre">1]]</span></code> will now work as expected and select the first
 two rows while prepending a new axis to the array.</p>
 </div>
-<div class="section" id="id62">
-<h4>C-API<a class="headerlink" href="#id62" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id66">
+<h4>C-API<a class="headerlink" href="#id66" title="Permalink to this headline">¶</a></h4>
 <p>New ufuncs can now be registered with builtin input types and a custom
 output type. Before this change, NumPy wouldn’t be able to find the right
 ufunc loop function when the ufunc was called from Python, because the ufunc
@@ -3736,8 +3858,8 @@ argument with the correct output type.</p>
 <code class="docutils literal"><span class="pre">setup.py</span> <span class="pre">build</span></code> and can be used to run tests easily during development.</p>
 </div>
 </div>
-<div class="section" id="id63">
-<h3>Improvements<a class="headerlink" href="#id63" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id67">
+<h3>Improvements<a class="headerlink" href="#id67" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="io-performance-improvements">
 <h4>IO performance improvements<a class="headerlink" href="#io-performance-improvements" title="Permalink to this headline">¶</a></h4>
 <p>Performance in reading large files was improved by chunking (see also IO compatibility).</p>
@@ -3809,8 +3931,8 @@ For example, to set the reduce flag for a ufunc:</p>
 <p>ufunc-&gt;iter_flags = NPY_ITER_REDUCE_OK;</p>
 </div>
 </div>
-<div class="section" id="id64">
-<h3>Changes<a class="headerlink" href="#id64" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id68">
+<h3>Changes<a class="headerlink" href="#id68" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="general">
 <h4>General<a class="headerlink" href="#general" title="Permalink to this headline">¶</a></h4>
 <p>The function np.take now allows 0-d arrays as indices.</p>
@@ -3859,11 +3981,11 @@ memory were allocated, often requiring C-API subtypes to
 reimplement <code class="docutils literal"><span class="pre">tp_new</span></code>.</p>
 </div>
 </div>
-<div class="section" id="id65">
-<h3>Deprecations<a class="headerlink" href="#id65" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id69">
+<h3>Deprecations<a class="headerlink" href="#id69" title="Permalink to this headline">¶</a></h3>
 <p>The ‘full’ and ‘economic’ modes of qr factorization are deprecated.</p>
-<div class="section" id="id66">
-<h4>General<a class="headerlink" href="#id66" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id70">
+<h4>General<a class="headerlink" href="#id70" title="Permalink to this headline">¶</a></h4>
 <p>The use of non-integer for indices and most integer arguments has been
 deprecated. Previously float indices and function arguments such as axes or
 shapes were truncated to integers without warning. For example
@@ -4005,8 +4127,8 @@ People with a “+” by their names contributed a patch for the first time.</p>
 <p>This is a bugfix only release in the 1.7.x series.
 It supports Python 2.4 - 2.7 and 3.1 - 3.3 and is the last series that
 supports Python 2.4 - 2.5.</p>
-<div class="section" id="id67">
-<h3>Issues fixed<a class="headerlink" href="#id67" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id71">
+<h3>Issues fixed<a class="headerlink" href="#id71" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>gh-3153: Do not reuse nditer buffers when not filled enough</li>
 <li>gh-3192: f2py crashes with UnboundLocalError exception</li>
@@ -4059,8 +4181,8 @@ supports Python 2.4 - 2.5.</p>
 <p>This is a bugfix only release in the 1.7.x series.
 It supports Python 2.4 - 2.7 and 3.1 - 3.3 and is the last series that
 supports Python 2.4 - 2.5.</p>
-<div class="section" id="id68">
-<h3>Issues fixed<a class="headerlink" href="#id68" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id72">
+<h3>Issues fixed<a class="headerlink" href="#id72" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>gh-2973: Fix <em class="xref py py-obj">1</em> is printed during numpy.test()</li>
 <li>gh-2983: BUG: gh-2969: Backport memory leak fix 80b3a34.</li>
@@ -4085,8 +4207,8 @@ supports Python 2.4 - 2.5.</p>
 <p>This release includes several new features as well as numerous bug fixes and
 refactorings. It supports Python 2.4 - 2.7 and 3.1 - 3.3 and is the last
 release that supports Python 2.4 - 2.5.</p>
-<div class="section" id="id69">
-<h3>Highlights<a class="headerlink" href="#id69" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id73">
+<h3>Highlights<a class="headerlink" href="#id73" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><code class="docutils literal"><span class="pre">where=</span></code> parameter to ufuncs (allows the use of boolean arrays to choose
 where a computation should be done)</li>
@@ -4095,8 +4217,8 @@ cleanup and bug fixes)</li>
 <li><code class="docutils literal"><span class="pre">numpy.random.choice</span></code> (random sample generating function)</li>
 </ul>
 </div>
-<div class="section" id="id70">
-<h3>Compatibility notes<a class="headerlink" href="#id70" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id74">
+<h3>Compatibility notes<a class="headerlink" href="#id74" title="Permalink to this headline">¶</a></h3>
 <p>In a future version of numpy, the functions np.diag, np.diagonal, and the
 diagonal method of ndarrays will return a view onto the original array,
 instead of producing a copy as they do now. This makes a difference if you
@@ -4135,8 +4257,8 @@ areas of type resolution and buffered iteration over universal functions.
 This might have an impact on your code particularly if you relied on
 accidental behavior in the past.</p>
 </div>
-<div class="section" id="id71">
-<h3>New features<a class="headerlink" href="#id71" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id75">
+<h3>New features<a class="headerlink" href="#id75" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="reduction-ufuncs-generalize-axis-parameter">
 <h4>Reduction UFuncs Generalize axis= Parameter<a class="headerlink" href="#reduction-ufuncs-generalize-axis-parameter" title="Permalink to this headline">¶</a></h4>
 <p>Any ufunc.reduce function call, as well as other reductions like sum, prod,
@@ -4215,12 +4337,12 @@ public ‘pad’ function.  Example:</p>
 <p>The function searchsorted now accepts a ‘sorter’ argument that is a
 permutation array that sorts the array to search.</p>
 </div>
-<div class="section" id="id72">
-<h4>Build system<a class="headerlink" href="#id72" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id76">
+<h4>Build system<a class="headerlink" href="#id76" title="Permalink to this headline">¶</a></h4>
 <p>Added experimental support for the AArch64 architecture.</p>
 </div>
-<div class="section" id="id73">
-<h4>C API<a class="headerlink" href="#id73" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id77">
+<h4>C API<a class="headerlink" href="#id77" title="Permalink to this headline">¶</a></h4>
 <p>New function <code class="docutils literal"><span class="pre">PyArray_RequireWriteable</span></code> provides a consistent interface
 for checking array writeability – any C code which works with arrays whose
 WRITEABLE flag is not known to be True a priori, should make sure to call
@@ -4228,10 +4350,10 @@ this function before writing.</p>
 <p>NumPy C Style Guide added (<code class="docutils literal"><span class="pre">doc/C_STYLE_GUIDE.rst.txt</span></code>).</p>
 </div>
 </div>
-<div class="section" id="id74">
-<h3>Changes<a class="headerlink" href="#id74" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="id75">
-<h4>General<a class="headerlink" href="#id75" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id78">
+<h3>Changes<a class="headerlink" href="#id78" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id79">
+<h4>General<a class="headerlink" href="#id79" title="Permalink to this headline">¶</a></h4>
 <p>The function np.concatenate tries to match the layout of its input arrays.
 Previously, the layout did not follow any particular reason, and depended
 in an undesirable way on the particular axis chosen for concatenation. A
@@ -4303,10 +4425,10 @@ example:</p>
 specifying the type as the second argument (e.g. <code class="docutils literal"><span class="pre">np.datetime64(2000,</span> <span class="pre">'Y')</span></code>).</p>
 </div>
 </div>
-<div class="section" id="id76">
-<h3>Deprecations<a class="headerlink" href="#id76" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="id77">
-<h4>General<a class="headerlink" href="#id77" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id80">
+<h3>Deprecations<a class="headerlink" href="#id80" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id81">
+<h4>General<a class="headerlink" href="#id81" title="Permalink to this headline">¶</a></h4>
 <p>Specifying a custom string formatter with a <em class="xref py py-obj">_format</em> array attribute is
 deprecated. The new <a class="reference external" href="https://docs.python.org/dev/library/formatter.html#module-formatter" title="(in Python v3.7)"><code class="xref py py-obj docutils literal"><span class="pre">formatter</span></code></a> keyword in <code class="docutils literal"><span class="pre">numpy.set_printoptions</span></code> or
 <code class="docutils literal"><span class="pre">numpy.array2string</span></code> can be used instead.</p>
@@ -4315,8 +4437,8 @@ deprecated. The new <a class="reference external" href="https://docs.python.org/
 Versions of numpy &lt; 1.7.0 ignored axis argument value for 1D arrays. We
 allow this for now, but in due course we will raise an error.</p>
 </div>
-<div class="section" id="id78">
-<h4>C-API<a class="headerlink" href="#id78" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id82">
+<h4>C-API<a class="headerlink" href="#id82" title="Permalink to this headline">¶</a></h4>
 <p>Direct access to the fields of PyArrayObject* has been deprecated. Direct
 access has been recommended against for many releases. Expect similar
 deprecations for PyArray_Descr* and other core objects in the future as
@@ -4338,8 +4460,8 @@ removed in NumPy 1.8. See the discussion at
 <p>This is a bugfix release in the 1.6.x series.  Due to the delay of the NumPy
 1.7.0 release, this release contains far more fixes than a regular NumPy bugfix
 release.  It also includes a number of documentation and build improvements.</p>
-<div class="section" id="id79">
-<h3>Issues fixed<a class="headerlink" href="#id79" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id83">
+<h3>Issues fixed<a class="headerlink" href="#id83" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="numpy-core">
 <h4><code class="docutils literal"><span class="pre">numpy.core</span></code><a class="headerlink" href="#numpy-core" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
@@ -4398,8 +4520,8 @@ release.  It also includes a number of documentation and build improvements.</p>
 </ul>
 </div>
 </div>
-<div class="section" id="id80">
-<h3>Changes<a class="headerlink" href="#id80" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id84">
+<h3>Changes<a class="headerlink" href="#id84" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="numpy-f2py">
 <h4><code class="docutils literal"><span class="pre">numpy.f2py</span></code><a class="headerlink" href="#numpy-f2py" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
@@ -4430,8 +4552,8 @@ release.  It also includes a number of documentation and build improvements.</p>
 <div class="section" id="numpy-1-6-1-release-notes">
 <h2>NumPy 1.6.1 Release Notes<a class="headerlink" href="#numpy-1-6-1-release-notes" title="Permalink to this headline">¶</a></h2>
 <p>This is a bugfix only release in the 1.6.x series.</p>
-<div class="section" id="id81">
-<h3>Issues Fixed<a class="headerlink" href="#id81" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id85">
+<h3>Issues Fixed<a class="headerlink" href="#id85" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>#1834: einsum fails for specific shapes</li>
 <li>#1837: einsum throws nan or freezes python for specific array shapes</li>
@@ -4452,16 +4574,16 @@ release.  It also includes a number of documentation and build improvements.</p>
 <p>This release includes several new features as well as numerous bug fixes and
 improved documentation.  It is backward compatible with the 1.5.0 release, and
 supports Python 2.4 - 2.7 and 3.1 - 3.2.</p>
-<div class="section" id="id82">
-<h3>Highlights<a class="headerlink" href="#id82" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id86">
+<h3>Highlights<a class="headerlink" href="#id86" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Re-introduction of datetime dtype support to deal with dates in arrays.</li>
 <li>A new 16-bit floating point type.</li>
 <li>A new iterator, which improves performance of many functions.</li>
 </ul>
 </div>
-<div class="section" id="id83">
-<h3>New features<a class="headerlink" href="#id83" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id87">
+<h3>New features<a class="headerlink" href="#id87" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="new-16-bit-floating-point-type">
 <h4>New 16-bit floating point type<a class="headerlink" href="#new-16-bit-floating-point-type" title="Permalink to this headline">¶</a></h4>
 <p>This release adds support for the IEEE 754-2008 binary16 format, available as
@@ -4516,15 +4638,15 @@ and <code class="docutils literal"><span class="pre">numpy.mintypecode</span></c
 not match the ufunc implementation.</p>
 </div>
 </div>
-<div class="section" id="id84">
-<h3>Changes<a class="headerlink" href="#id84" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id88">
+<h3>Changes<a class="headerlink" href="#id88" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="default-error-handling">
 <h4><code class="docutils literal"><span class="pre">default</span> <span class="pre">error</span> <span class="pre">handling</span></code><a class="headerlink" href="#default-error-handling" title="Permalink to this headline">¶</a></h4>
 <p>The default error handling has been change from <code class="docutils literal"><span class="pre">print</span></code> to <code class="docutils literal"><span class="pre">warn</span></code> for
 all except for <code class="docutils literal"><span class="pre">underflow</span></code>, which remains as <code class="docutils literal"><span class="pre">ignore</span></code>.</p>
 </div>
-<div class="section" id="id85">
-<h4><code class="docutils literal"><span class="pre">numpy.distutils</span></code><a class="headerlink" href="#id85" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id89">
+<h4><code class="docutils literal"><span class="pre">numpy.distutils</span></code><a class="headerlink" href="#id89" title="Permalink to this headline">¶</a></h4>
 <p>Several new compilers are supported for building Numpy: the Portland Group
 Fortran compiler on OS X, the PathScale compiler suite and the 64-bit Intel C
 compiler on Linux.</p>
@@ -4535,8 +4657,8 @@ compiler on Linux.</p>
 a more convenient way to compare floating point arrays than
 <em class="xref py py-obj">assert_almost_equal</em>, <em class="xref py py-obj">assert_approx_equal</em> and <em class="xref py py-obj">assert_array_almost_equal</em>.</p>
 </div>
-<div class="section" id="id86">
-<h4><code class="docutils literal"><span class="pre">C</span> <span class="pre">API</span></code><a class="headerlink" href="#id86" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id90">
+<h4><code class="docutils literal"><span class="pre">C</span> <span class="pre">API</span></code><a class="headerlink" href="#id90" title="Permalink to this headline">¶</a></h4>
 <p>In addition to the APIs for the new iterator and half data type, a number
 of other additions have been made to the C API. The type promotion
 mechanism used by ufuncs is exposed via <code class="docutils literal"><span class="pre">PyArray_PromoteTypes</span></code>,
@@ -4566,8 +4688,8 @@ removed.</p>
 <p>The <em class="xref py py-obj">sync()</em> and <em class="xref py py-obj">close()</em> methods of memmap were removed.  Use <em class="xref py py-obj">flush()</em> and
 “del memmap” instead.</p>
 </div>
-<div class="section" id="id87">
-<h4><code class="docutils literal"><span class="pre">numpy.lib</span></code><a class="headerlink" href="#id87" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id91">
+<h4><code class="docutils literal"><span class="pre">numpy.lib</span></code><a class="headerlink" href="#id91" title="Permalink to this headline">¶</a></h4>
 <p>The deprecated functions <code class="docutils literal"><span class="pre">numpy.unique1d</span></code>, <code class="docutils literal"><span class="pre">numpy.setmember1d</span></code>,
 <code class="docutils literal"><span class="pre">numpy.intersect1d_nu</span></code> and <code class="docutils literal"><span class="pre">numpy.lib.ufunclike.log2</span></code> were removed.</p>
 </div>
@@ -4581,8 +4703,8 @@ removed.</p>
 </pre></div>
 </div>
 </div>
-<div class="section" id="id88">
-<h4><code class="docutils literal"><span class="pre">numpy.distutils</span></code><a class="headerlink" href="#id88" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id92">
+<h4><code class="docutils literal"><span class="pre">numpy.distutils</span></code><a class="headerlink" href="#id92" title="Permalink to this headline">¶</a></h4>
 <p>The <code class="docutils literal"><span class="pre">numpy.get_numpy_include</span></code> function was removed, use <code class="docutils literal"><span class="pre">numpy.get_include</span></code>
 instead.</p>
 </div>
@@ -4590,8 +4712,8 @@ instead.</p>
 </div>
 <div class="section" id="numpy-1-5-0-release-notes">
 <h2>NumPy 1.5.0 Release Notes<a class="headerlink" href="#numpy-1-5-0-release-notes" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="id89">
-<h3>Highlights<a class="headerlink" href="#id89" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id93">
+<h3>Highlights<a class="headerlink" href="#id93" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="python-3-compatibility">
 <h4>Python 3 compatibility<a class="headerlink" href="#python-3-compatibility" title="Permalink to this headline">¶</a></h4>
 <p>This is the first NumPy release which is compatible with Python 3. Support for
@@ -4611,8 +4733,8 @@ interface, and array(), asarray() and other functions accept new-style buffers
 as input.</p>
 </div>
 </div>
-<div class="section" id="id90">
-<h3>New features<a class="headerlink" href="#id90" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id94">
+<h3>New features<a class="headerlink" href="#id94" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="warning-on-casting-complex-to-real">
 <h4>Warning on casting complex to real<a class="headerlink" href="#warning-on-casting-complex-to-real" title="Permalink to this headline">¶</a></h4>
 <p>Numpy now emits a <code class="xref py py-obj docutils literal"><span class="pre">numpy.ComplexWarning</span></code> when a complex number is cast
@@ -4660,8 +4782,8 @@ enumerations without needing to concern themselves with the macro
 expansions and their side- effects.</p>
 </div>
 </div>
-<div class="section" id="id91">
-<h3>Changes<a class="headerlink" href="#id91" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id95">
+<h3>Changes<a class="headerlink" href="#id95" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="polynomial-polynomial">
 <h4>polynomial.polynomial<a class="headerlink" href="#polynomial-polynomial" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
@@ -4713,8 +4835,8 @@ usual definition for cross-correlation) is now the default.</p>
 <h2>NumPy 1.4.0 Release Notes<a class="headerlink" href="#numpy-1-4-0-release-notes" title="Permalink to this headline">¶</a></h2>
 <p>This minor includes numerous bug fixes, as well as a few new features. It
 is backward compatible with 1.3.0 release.</p>
-<div class="section" id="id92">
-<h3>Highlights<a class="headerlink" href="#id92" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id96">
+<h3>Highlights<a class="headerlink" href="#id96" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>New datetime dtype support to deal with dates in arrays</li>
 <li>Faster import time</li>
@@ -4723,8 +4845,8 @@ is backward compatible with 1.3.0 release.</p>
 <li>C99-like complex functions in npymath</li>
 </ul>
 </div>
-<div class="section" id="id93">
-<h3>New features<a class="headerlink" href="#id93" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id97">
+<h3>New features<a class="headerlink" href="#id97" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="extended-array-wrapping-mechanism-for-ufuncs">
 <h4>Extended array wrapping mechanism for ufuncs<a class="headerlink" href="#extended-array-wrapping-mechanism-for-ufuncs" title="Permalink to this headline">¶</a></h4>
 <p>An __array_prepare__ method has been added to ndarray to provide subclasses
@@ -4851,8 +4973,8 @@ to contain duplicates, which can increase the functions’ execution
 speed.</p>
 </div>
 </div>
-<div class="section" id="id94">
-<h3>Improvements<a class="headerlink" href="#id94" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id98">
+<h3>Improvements<a class="headerlink" href="#id98" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><ol class="arabic">
 <li><p class="first">numpy import is noticeably faster (from 20 to 30 % depending on the
@@ -4879,8 +5001,8 @@ containing nan values.</p>
 </ol>
 </div></blockquote>
 </div>
-<div class="section" id="id95">
-<h3>Deprecations<a class="headerlink" href="#id95" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id99">
+<h3>Deprecations<a class="headerlink" href="#id99" title="Permalink to this headline">¶</a></h3>
 <p>The following functions are deprecated:</p>
 <blockquote>
 <div><ol class="arabic simple">
@@ -4957,8 +5079,8 @@ working on core numpy.</p>
 <h2>NumPy 1.3.0 Release Notes<a class="headerlink" href="#numpy-1-3-0-release-notes" title="Permalink to this headline">¶</a></h2>
 <p>This minor includes numerous bug fixes, official python 2.6 support, and
 several new features such as generalized ufuncs.</p>
-<div class="section" id="id96">
-<h3>Highlights<a class="headerlink" href="#id96" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id100">
+<h3>Highlights<a class="headerlink" href="#id100" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="python-2-6-support">
 <h4>Python 2.6 support<a class="headerlink" href="#python-2-6-support" title="Permalink to this headline">¶</a></h4>
 <p>Python 2.6 is now supported on all previously supported platforms, including
@@ -5012,8 +5134,8 @@ Windows 64 bits section for more information on limitations and how to build it
 by yourself.</p>
 </div>
 </div>
-<div class="section" id="id97">
-<h3>New features<a class="headerlink" href="#id97" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id101">
+<h3>New features<a class="headerlink" href="#id101" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="formatting-issues">
 <h4>Formatting issues<a class="headerlink" href="#formatting-issues" title="Permalink to this headline">¶</a></h4>
 <p>Float formatting is now handled by numpy instead of the C runtime: this enables
@@ -5033,8 +5155,8 @@ with non-propagating nans.</p>
 <h4>Nan handling in sign<a class="headerlink" href="#nan-handling-in-sign" title="Permalink to this headline">¶</a></h4>
 <p>The ufunc sign now returns nan for the sign of anan.</p>
 </div>
-<div class="section" id="id98">
-<h4>New ufuncs<a class="headerlink" href="#id98" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id102">
+<h4>New ufuncs<a class="headerlink" href="#id102" title="Permalink to this headline">¶</a></h4>
 <ol class="arabic simple">
 <li>fmax - same as maximum for integer types and non-nan floats. Returns the
 non-nan argument if one argument is nan and returns nan if both arguments
@@ -5085,10 +5207,10 @@ studio at all on x64.</p>
 supports SSE set.</p>
 </div>
 </div>
-<div class="section" id="id99">
-<h3>Deprecated features<a class="headerlink" href="#id99" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="id100">
-<h4>Histogram<a class="headerlink" href="#id100" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id103">
+<h3>Deprecated features<a class="headerlink" href="#id103" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id104">
+<h4>Histogram<a class="headerlink" href="#id104" title="Permalink to this headline">¶</a></h4>
 <p>The semantics of histogram has been modified to fix long-standing issues
 with outliers handling. The main changes concern</p>
 <ol class="arabic simple">
@@ -5105,8 +5227,8 @@ deprecated, and will be removed entirely in 1.4.0.</p>
 <p>A lot of documentation has been added. Both user guide and references can be
 built from sphinx.</p>
 </div>
-<div class="section" id="id101">
-<h3>New C API<a class="headerlink" href="#id101" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id105">
+<h3>New C API<a class="headerlink" href="#id105" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="multiarray-api">
 <h4>Multiarray API<a class="headerlink" href="#multiarray-api" title="Permalink to this headline">¶</a></h4>
 <p>The following functions have been added to the multiarray C API:</p>
@@ -5126,8 +5248,8 @@ built from sphinx.</p>
 </ul>
 </div></blockquote>
 </div>
-<div class="section" id="id102">
-<h4>New defines<a class="headerlink" href="#id102" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id106">
+<h4>New defines<a class="headerlink" href="#id106" title="Permalink to this headline">¶</a></h4>
 <p>New public C defines are available for ARCH specific code through numpy/npy_cpu.h:</p>
 <blockquote>
 <div><ul class="simple">
@@ -5168,8 +5290,8 @@ references to NAN, or home-grown computation of NAN on the fly have been
 removed for consistency.</p>
 </div>
 </div>
-<div class="section" id="id103">
-<h3>Internal changes<a class="headerlink" href="#id103" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id107">
+<h3>Internal changes<a class="headerlink" href="#id107" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="numpy-core-math-configuration-revamp">
 <h4>numpy.core math configuration revamp<a class="headerlink" href="#numpy-core-math-configuration-revamp" title="Permalink to this headline">¶</a></h4>
 <p>This should make the porting to new platforms easier, and more robust. In
@@ -5186,8 +5308,8 @@ target platform, which is a first step toward cross-compilation.</p>
 <p>Numpy can now build with -W -Wall without warnings</p>
 <p><a class="reference external" href="http://projects.scipy.org/numpy/browser/trunk/doc/neps/warnfix.txt">http://projects.scipy.org/numpy/browser/trunk/doc/neps/warnfix.txt</a></p>
 </div>
-<div class="section" id="id104">
-<h4>Separate core math library<a class="headerlink" href="#id104" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id108">
+<h4>Separate core math library<a class="headerlink" href="#id108" title="Permalink to this headline">¶</a></h4>
 <p>The core math functions (sin, cos, etc… for basic C types) have been put into
 a separate library; it acts as a compatibility layer, to support most C99 maths
 functions (real only for now). The library includes platform-specific fixes for
@@ -5235,7 +5357,7 @@ cross-compilation and multi-arch binaries.</p>
         &copy; Copyright 2008-2017, The SciPy community.
       </li>
       <li>
-      Last updated on Nov 05, 2017.
+      Last updated on Nov 16, 2017.
       </li>
       <li>
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.3.

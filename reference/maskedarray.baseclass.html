@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '1.14.0.dev0+47f1041',
+        VERSION:     '1.14.0.dev0+a08da3f',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  false
@@ -173,7 +173,7 @@ By default, this string is <code class="docutils literal"><span class="pre">'--'
 <span id="maskedarray-baseclass"></span><h1>The <a class="reference internal" href="#numpy.ma.MaskedArray" title="numpy.ma.MaskedArray"><code class="xref py py-class docutils literal"><span class="pre">MaskedArray</span></code></a> class<a class="headerlink" href="#the-maskedarray-class" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="numpy.ma.MaskedArray">
-<em class="property">class </em><code class="descclassname">numpy.ma.</code><code class="descname">MaskedArray</code><a class="reference external" href="http://github.com/numpy/numpy/blob/master/numpy/ma/core.py#L2690-L5967"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numpy.ma.MaskedArray" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">numpy.ma.</code><code class="descname">MaskedArray</code><a class="reference external" href="http://github.com/numpy/numpy/blob/master/numpy/ma/core.py#L2704-L5980"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numpy.ma.MaskedArray" title="Permalink to this definition">¶</a></dt>
 <dd><blockquote>
 <div>A subclass of <a class="reference internal" href="generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray"><code class="xref py py-class docutils literal"><span class="pre">ndarray</span></code></a> designed to manipulate numerical arrays with missing data.</div></blockquote>
 <p>An instance of <a class="reference internal" href="#numpy.ma.MaskedArray" title="numpy.ma.MaskedArray"><code class="xref py py-class docutils literal"><span class="pre">MaskedArray</span></code></a> can be thought as the combination of several elements:</p>
@@ -373,8 +373,8 @@ When the mask is hard, masked entries cannot be unmasked.</p>
 <tr class="row-odd"><td><a class="reference internal" href="generated/numpy.ma.MaskedArray.__int__.html#numpy.ma.MaskedArray.__int__" title="numpy.ma.MaskedArray.__int__"><code class="xref py py-obj docutils literal"><span class="pre">MaskedArray.__int__</span></code></a>()</td>
 <td>Convert to int.</td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">MaskedArray.__long__</span></code></td>
-<td></td>
+<tr class="row-even"><td><a class="reference internal" href="generated/numpy.ma.MaskedArray.__long__.html#numpy.ma.MaskedArray.__long__" title="numpy.ma.MaskedArray.__long__"><code class="xref py py-obj docutils literal"><span class="pre">MaskedArray.__long__</span></code></a>()</td>
+<td>Convert to long.</td>
 </tr>
 <tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">MaskedArray.__oct__</span></code></td>
 <td></td>
@@ -803,7 +803,7 @@ the operation should proceed.</p>
 <td>Literal string representation.</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="generated/numpy.ma.MaskedArray.__str__.html#numpy.ma.MaskedArray.__str__" title="numpy.ma.MaskedArray.__str__"><code class="xref py py-obj docutils literal"><span class="pre">MaskedArray.__str__</span></code></a>()</td>
-<td>String representation.</td>
+<td></td>
 </tr>
 <tr class="row-odd"><td><a class="reference internal" href="generated/numpy.ma.MaskedArray.ids.html#numpy.ma.MaskedArray.ids" title="numpy.ma.MaskedArray.ids"><code class="xref py py-obj docutils literal"><span class="pre">MaskedArray.ids</span></code></a>()</td>
 <td>Return the addresses of the data and mask areas.</td>
@@ -823,8 +823,8 @@ the operation should proceed.</p>
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="generated/numpy.ma.MaskedArray.__copy__.html#numpy.ma.MaskedArray.__copy__" title="numpy.ma.MaskedArray.__copy__"><code class="xref py py-obj docutils literal"><span class="pre">MaskedArray.__copy__</span></code></a>([order])</td>
-<td>Return a copy of the array.</td>
+<tr class="row-odd"><td><a class="reference internal" href="generated/numpy.ma.MaskedArray.__copy__.html#numpy.ma.MaskedArray.__copy__" title="numpy.ma.MaskedArray.__copy__"><code class="xref py py-obj docutils literal"><span class="pre">MaskedArray.__copy__</span></code></a>()</td>
+<td>Used if <a class="reference external" href="https://docs.python.org/dev/library/copy.html#copy.copy" title="(in Python v3.7)"><code class="xref py py-func docutils literal"><span class="pre">copy.copy</span></code></a> is called on an array.</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="generated/numpy.ma.MaskedArray.__deepcopy__.html#numpy.ma.MaskedArray.__deepcopy__" title="numpy.ma.MaskedArray.__deepcopy__"><code class="xref py py-obj docutils literal"><span class="pre">MaskedArray.__deepcopy__</span></code></a>([memo])</td>
 <td></td>
@@ -968,7 +968,7 @@ manipulate the mask.</p>
         &copy; Copyright 2008-2017, The SciPy community.
       </li>
       <li>
-      Last updated on Nov 05, 2017.
+      Last updated on Nov 16, 2017.
       </li>
       <li>
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.3.

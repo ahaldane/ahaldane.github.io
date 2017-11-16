@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '1.14.0.dev0+47f1041',
+        VERSION:     '1.14.0.dev0+a08da3f',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  false
@@ -100,7 +100,7 @@
 <h1>numpy.genfromtxt<a class="headerlink" href="#numpy-genfromtxt" title="Permalink to this headline">¶</a></h1>
 <dl class="function">
 <dt id="numpy.genfromtxt">
-<code class="descclassname">numpy.</code><code class="descname">genfromtxt</code><span class="sig-paren">(</span><em>fname</em>, <em>dtype=&lt;class 'float'&gt;</em>, <em>comments='#'</em>, <em>delimiter=None</em>, <em>skip_header=0</em>, <em>skip_footer=0</em>, <em>converters=None</em>, <em>missing_values=None</em>, <em>filling_values=None</em>, <em>usecols=None</em>, <em>names=None</em>, <em>excludelist=None</em>, <em>deletechars=None</em>, <em>replace_space='_'</em>, <em>autostrip=False</em>, <em>case_sensitive=True</em>, <em>defaultfmt='f%i'</em>, <em>unpack=None</em>, <em>usemask=False</em>, <em>loose=True</em>, <em>invalid_raise=True</em>, <em>max_rows=None</em><span class="sig-paren">)</span><a class="reference external" href="http://github.com/numpy/numpy/blob/master/numpy/lib/npyio.py#L1358-L1992"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numpy.genfromtxt" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">numpy.</code><code class="descname">genfromtxt</code><span class="sig-paren">(</span><em>fname</em>, <em>dtype=&lt;class 'float'&gt;</em>, <em>comments='#'</em>, <em>delimiter=None</em>, <em>skip_header=0</em>, <em>skip_footer=0</em>, <em>converters=None</em>, <em>missing_values=None</em>, <em>filling_values=None</em>, <em>usecols=None</em>, <em>names=None</em>, <em>excludelist=None</em>, <em>deletechars=None</em>, <em>replace_space='_'</em>, <em>autostrip=False</em>, <em>case_sensitive=True</em>, <em>defaultfmt='f%i'</em>, <em>unpack=None</em>, <em>usemask=False</em>, <em>loose=True</em>, <em>invalid_raise=True</em>, <em>max_rows=None</em><span class="sig-paren">)</span><a class="reference external" href="http://github.com/numpy/numpy/blob/master/numpy/lib/npyio.py#L1369-L2004"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numpy.genfromtxt" title="Permalink to this definition">¶</a></dt>
 <dd><p>Load data from a text file, with missing values handled as specified.</p>
 <p>Each line past the first <em class="xref py py-obj">skip_header</em> lines is split at the <em class="xref py py-obj">delimiter</em>
 character, and characters following the <em class="xref py py-obj">comments</em> character are discarded.</p>
@@ -170,11 +170,12 @@ instead.</p>
 </div></blockquote>
 <p><strong>names</strong> : {None, True, str, sequence}, optional</p>
 <blockquote>
-<div><p>If <em class="xref py py-obj">names</em> is True, the field names are read from the first valid line
-after the first <em class="xref py py-obj">skip_header</em> lines.
-If <em class="xref py py-obj">names</em> is a sequence or a single-string of comma-separated names,
-the names will be used to define the field names in a structured dtype.
-If <em class="xref py py-obj">names</em> is None, the names of the dtype fields will be used, if any.</p>
+<div><p>If <em class="xref py py-obj">names</em> is True, the field names are read from the first line after
+the first <em class="xref py py-obj">skip_header</em> lines.  This line can optionally be proceeded
+by a comment delimeter. If <em class="xref py py-obj">names</em> is a sequence or a single-string of
+comma-separated names, the names will be used to define the field names
+in a structured dtype. If <em class="xref py py-obj">names</em> is None, the names of the dtype
+fields will be used, if any.</p>
 </div></blockquote>
 <p><strong>excludelist</strong> : sequence, optional</p>
 <blockquote>
@@ -336,7 +337,7 @@ When using a custom converter, make sure the function does remove spaces.</li>
         &copy; Copyright 2008-2017, The SciPy community.
       </li>
       <li>
-      Last updated on Nov 05, 2017.
+      Last updated on Nov 16, 2017.
       </li>
       <li>
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.3.

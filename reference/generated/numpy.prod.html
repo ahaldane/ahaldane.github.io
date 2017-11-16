@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '1.14.0.dev0+47f1041',
+        VERSION:     '1.14.0.dev0+a08da3f',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  false
@@ -100,7 +100,7 @@
 <h1>numpy.prod<a class="headerlink" href="#numpy-prod" title="Permalink to this headline">¶</a></h1>
 <dl class="function">
 <dt id="numpy.prod">
-<code class="descclassname">numpy.</code><code class="descname">prod</code><span class="sig-paren">(</span><em>a</em>, <em>axis=None</em>, <em>dtype=None</em>, <em>out=None</em>, <em>keepdims=&lt;class 'numpy._globals._NoValue'&gt;</em><span class="sig-paren">)</span><a class="reference external" href="http://github.com/numpy/numpy/blob/master/numpy/core/fromnumeric.py#L2402-L2512"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numpy.prod" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">numpy.</code><code class="descname">prod</code><span class="sig-paren">(</span><em>a</em>, <em>axis=None</em>, <em>dtype=None</em>, <em>out=None</em>, <em>keepdims=&lt;class 'numpy._globals._NoValue'&gt;</em><span class="sig-paren">)</span><a class="reference external" href="http://github.com/numpy/numpy/blob/master/numpy/core/fromnumeric.py#L2426-L2536"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numpy.prod" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the product of array elements over a given axis.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -173,7 +173,7 @@ Returns a reference to <em class="xref py py-obj">out</em> if specified.</p>
 <p>Arithmetic is modular when using integer types, and no error is
 raised on overflow.  That means that, on a 32-bit platform:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">536870910</span><span class="p">,</span> <span class="mi">536870910</span><span class="p">,</span> <span class="mi">536870910</span><span class="p">,</span> <span class="mi">536870910</span><span class="p">])</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">prod</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="c1">#random</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">prod</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>  <span class="c1"># random</span>
 <span class="go">16</span>
 </pre></div>
 </div>
@@ -237,7 +237,7 @@ is the default platform integer:</p>
         &copy; Copyright 2008-2017, The SciPy community.
       </li>
       <li>
-      Last updated on Nov 05, 2017.
+      Last updated on Nov 16, 2017.
       </li>
       <li>
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.3.
